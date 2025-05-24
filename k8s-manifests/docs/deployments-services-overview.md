@@ -80,7 +80,7 @@ kubectl rollout undo deployment/<deployment-name>
 ```
 ---
 
-# Kubernetes Services
+# 🌐 Kubernetes Services
 
 ### Overview
 A Kubernetes Service is an abstraction that defines a logical set of pods and a policy to access them. It provides a stable IP address and DNS name for pods, enabling communication between different components of your application.
