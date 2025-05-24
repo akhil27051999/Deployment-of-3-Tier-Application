@@ -13,6 +13,18 @@ This project demonstrates a complete DevOps lifecycle for a simple 3-tier micros
 - **Monitoring       :** Prometheus + Grafana
 - **Artifact Registry:** Docker Hub
 
+  ### 🛠️ DevOps Tools Stack
+
+| Function              | Tool(s)                          |
+|-----------------------|----------------------------------|
+| Source Control        | GitHub                           |
+| CI/CD Tools           | GitHub Actions (CI), GitLab + ArgoCD (CD with GitOps) |
+| Containerization      | Docker                           |
+| Orchestration         | Kubernetes (on AWS EC2)          |
+| Monitoring            | Prometheus + Grafana             |
+| Artifact Registry     | Docker Hub                       |
+
+
 ## 📂 Directory Overview
 
 - frontend/ – Frontend app + Dockerfile
