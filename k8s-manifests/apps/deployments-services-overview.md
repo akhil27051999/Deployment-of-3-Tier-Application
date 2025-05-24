@@ -1,16 +1,16 @@
 # Kubernetes Deployments
 
-### Overview
+## Overview
 A Kubernetes Deployment is a resource that manages the lifecycle of pods and replica sets for your applications. It helps you declaratively update, scale, and maintain your app with high availability.
 
-### Why Use Deployments?
+## Why Use Deployments?
 1. Ensure our app runs the desired number of replicas.
 2. Enable rolling updates for zero downtime deployments.
 3. Automatically replace failed pods (self-healing).
 4. Easily rollback to previous versions if needed.
 5. Declaratively manage our app state.
 
-### Deployment YAML Structure
+## Deployment YAML Structure
 
 A typical deployment YAML includes:
 
@@ -43,7 +43,7 @@ spec:
         - containerPort: 5000
 ```
 
-### Lifecycle
+## Lifecycle
 
 1. `Creation`: Kubernetes creates ReplicaSets and pods.
 2. `Monitoring`: Pods are continuously monitored and restarted if necessary.
@@ -51,13 +51,13 @@ spec:
 4. `Rollback`: Easy rollback to previous versions if something breaks.
 5. `Scaling`: Increase or decrease pod replicas based on demand.
 
-### How We Used Deployments
+## How We Used Deployments
 
 - Created Deployments for PostgreSQL database, backend API, and frontend UI.
 - Managed independent lifecycle and updates for each microservice.
 - Ensured high availability and scalability.
 
-### Troubleshooting
+## Troubleshooting
 
 1. Check deployment status:
 
@@ -84,41 +84,33 @@ kubectl rollout undo deployment/<deployment-name>
 
 # Kubernetes Services
 
-Overview
+## Overview
 A Kubernetes Service is an abstraction that defines a logical set of pods and a policy to access them. It provides a stable IP address and DNS name for pods, enabling communication between different components of your application.
 
-Why Use Services?
-Enable reliable network access to pods despite pod restarts or rescheduling.
+## Why Use Services?
+1. Enable reliable network access to pods despite pod restarts or rescheduling.
+2. Expose pods inside the cluster (ClusterIP) or outside the cluster (NodePort, LoadBalancer).
+3. Load balance traffic across multiple pods.
+4. Facilitate service discovery within the cluster.
 
-Expose pods inside the cluster (ClusterIP) or outside the cluster (NodePort, LoadBalancer).
+## Types of Services
 
-Load balance traffic across multiple pods.
+1. `ClusterIP (default)`: Exposes the service on an internal cluster IP. Accessible only within the cluster.
+2. `NodePort`: Exposes the service on each node’s IP at a static port. Accessible outside the cluster via <NodeIP>:<NodePort>.
+3. `LoadBalancer`: Provisions an external load balancer to expose the service outside the cluster (cloud environments).
+4. `ExternalName`: Maps the service to a DNS name.
 
-Facilitate service discovery within the cluster.
+## Service YAML Structure
 
-Types of Services
-ClusterIP (default): Exposes the service on an internal cluster IP. Accessible only within the cluster.
-
-NodePort: Exposes the service on each node’s IP at a static port. Accessible outside the cluster via <NodeIP>:<NodePort>.
-
-LoadBalancer: Provisions an external load balancer to expose the service outside the cluster (cloud environments).
-
-ExternalName: Maps the service to a DNS name.
-
-Service YAML Structure
 A typical service YAML includes:
+- type: Service type (ClusterIP, NodePort, etc.).
+- selector: Labels to identify the pods the service routes traffic to.
+- ports: The ports exposed by the service and the target ports on pods.
 
-type: Service type (ClusterIP, NodePort, etc.).
+## Example snippet:
 
-selector: Labels to identify the pods the service routes traffic to.
+```yaml
 
-ports: The ports exposed by the service and the target ports on pods.
-
-Example snippet:
-
-yaml
-Copy
-Edit
 apiVersion: v1
 kind: Service
 metadata:
@@ -131,18 +123,25 @@ spec:
   - protocol: TCP
     port: 5000
     targetPort: 5000
-How We Used Services
-Created ClusterIP services for backend and PostgreSQL to enable internal communication.
+```
 
-Created NodePort service for frontend to expose it outside the cluster on a node port.
+## How We Used Services
 
-Allowed frontend to communicate with backend and backend to communicate with the database via service DNS names.
+1. Created ClusterIP services for backend and PostgreSQL to enable internal communication.
+2. Created NodePort service for frontend to expose it outside the cluster on a node port.
+3. Allowed frontend to communicate with backend and backend to communicate with the database via service DNS names.
 
-Troubleshooting Connectivity
-Use kubectl get svc to check service details and assigned IPs/ports.
+## Troubleshooting Connectivity
 
-Use kubectl describe svc <service-name> to see endpoints and event details.
+1. To check service details and assigned IPs/ports.
+```bash
+kubectl get svc 
+```
 
-Test connectivity by curl or ping between pods using service names.
+2. To see endpoints and event details.
+```bash
+kubectl describe svc <service-name>
+```
 
-Debug DNS issues using tools like nslookup or dig inside pods.
+3. Test connectivity by curl or ping between pods using service names.
+4. Debug DNS issues using tools like nslookup or dig inside pods.
