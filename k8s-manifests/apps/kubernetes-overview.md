@@ -62,3 +62,15 @@ This creates:
 - Networking between services and pods.
 - we can now access the cluster using kubectl because kind automatically configures the context.
 
+### Verify the Cluster
+
+```bash
+kubectl cluster-info
+kubectl get nodes
+```
+
+**Expected output:**
+
+- One control-plane node listed as Ready.
+- Kubernetes API server endpoint shown in cluster-info.
+  
