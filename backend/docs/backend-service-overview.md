@@ -31,7 +31,7 @@ cd backend/
 
 **Step-by-step Explanation:**
 
-1. `FROM node:18-alpine`
+`FROM node:18-alpine`
 - Uses the official Node.js 18 image based on Alpine Linux. Alpine is a minimal, lightweight Linux distribution which makes the image smaller and faster to download.
 
 `WORKDIR /app`
