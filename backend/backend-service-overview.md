@@ -57,11 +57,11 @@ docker run -d \
   --name backend-container \
   backend-service
 ```
-
 - `-d`: Detached mode
 - `-p 5000:5000`: Exposes port 5000
 - `-e`: Sets the required environment variables
-- '--name`: Names the container backend-container
+- `--name`: Names the container backend-container
 - `backend-service`: Image built in Step 2
 
+### Step 5: Verify Backend is Running
 
