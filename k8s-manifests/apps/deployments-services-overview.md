@@ -100,9 +100,9 @@ A Kubernetes Service is an abstraction that defines a logical set of pods and a 
 ## Service YAML Structure
 
 A typical service YAML includes:
-- type: Service type (ClusterIP, NodePort, etc.).
-- selector: Labels to identify the pods the service routes traffic to.
-- ports: The ports exposed by the service and the target ports on pods.
+- `type`: Service type (ClusterIP, NodePort, etc.).
+- `selector`: Labels to identify the pods the service routes traffic to.
+- `ports`: The ports exposed by the service and the target ports on pods.
 
 ## Example snippet:
 
