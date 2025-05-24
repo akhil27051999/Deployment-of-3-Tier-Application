@@ -27,13 +27,33 @@ Follow the steps below to build and run the frontend microservice inside a Docke
 ```bash
 cd frontend/
 ```
-### Step 2 : Build the Docker Image
+
+### Step 2: Write Dockerfile for Frontend Microservice
+
+**Step by Step Explaination**
+
+`FROM node:18-alpine`
+- Uses the official Node.js v18 image based on Alpine Linux, a lightweight and secure base image perfect for frontend apps.
+`WORKDIR /app`
+- Sets the working directory in the container to /app. All commands and file paths after this will be relative to this directory.
+`COPY package*.json ./`
+- Copies package.json and package-lock.json into the container. These files define the application's dependencies.
+`RUN npm install`
+- Installs all required Node.js dependencies listed in package.json.
+`COPY . .`
+- Copies the remaining application source code into the container.
+`EXPOSE 3000`
+- Informs Docker that the container will listen on port 3000. This is commonly used by frontend dev servers (e.g., React).
+`CMD ["npm", "start"]`
+- Specifies the command to run the application. It starts the frontend server using the start script from package.json.
+  
+### Step 3 : Build the Docker Image
 
 ```bash
 docker build -t frontend-service .
 ```
 
-### Step 3 : Run the Docker Container
+### Step 4 : Run the Docker Container
 
 ```bash
 docker run -d \
@@ -47,7 +67,7 @@ docker run -d \
 - `frontend-service`: Docker image built in Step 2
 
 
-### Step 4: Verify Frontend is Running
+### Step 5: Verify Frontend is Running
 
 ```bash
 curl http://localhost:3000
