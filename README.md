@@ -4,7 +4,7 @@
 This project demonstrates a real-time DevOps workflow by deploying a 3-tier application (Frontend, Backend, and Database) on AWS using Docker, Kubernetes, GitHub Actions, GitLab, ArgoCD, Prometheus, and Grafana.
 
 ## Project Structure
-'''
+
 devops-project/
 │
 ├── frontend/               # React/HTML App
@@ -25,4 +25,3 @@ devops-project/
 │   └── ci-cd.yml
 └── README.md
 
-'''
