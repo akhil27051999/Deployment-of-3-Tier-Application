@@ -63,6 +63,8 @@ devops-project/
 │
 └── README.md                       # Project documentation
 
+```
+
 ## 🚀 Step 1: Launch an AWS EC2 VM and Connect via SSH
 
 Follow these steps to create a virtual machine (VM) on AWS and connect to it using SSH:
