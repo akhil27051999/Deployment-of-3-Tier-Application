@@ -17,8 +17,9 @@
 ## Installing Kubernetes CLI Tools
 
 ### Tool 1: kubectl
+
 **What is kubectl?**
-- kubectl is the official Kubernetes CLI (Command Line Interface) tool that allows you to interact with your Kubernetes cluster. It's like git for Kubernetes — everything from deploying applications to inspecting pods happens through this tool.
+kubectl is the official Kubernetes CLI (Command Line Interface) tool that allows you to interact with your Kubernetes cluster. It's like git for Kubernetes — everything from deploying applications to inspecting pods happens through this tool.
 
 **Why do we install kubectl?**
 1. To apply YAML manifests (e.g., Deployment, Service files).
@@ -33,11 +34,29 @@ kubectl version --client
 ```
 
 ### Tool 2: kind (Kubernetes in Docker)
+
 **What is kind?**
-- kind stands for Kubernetes IN Docker. It lets you run a full Kubernetes cluster locally using Docker containers as nodes. It's fast and ideal for development and testing purposes.
+kind stands for Kubernetes IN Docker. It lets you run a full Kubernetes cluster locally using Docker containers as nodes. It's fast and ideal for development and testing purposes.
 
 **Why use kind?**
 - Lightweight and runs without needing a cloud provider.
 - Ideal for local testing of multi-service applications.
 - Works well with kubectl, so you can use standard Kubernetes YAML files.
+
+```bash
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
+kind version
+```
+### Creating a Cluster with Kind
+
+```bash
+kind create cluster --name 3tier-cluster
+```
+This creates:
+
+- A Kubernetes control plane node inside a Docker container.
+- Networking between services and pods.
+- we can now access the cluster using kubectl because kind automatically configures the context.
 
