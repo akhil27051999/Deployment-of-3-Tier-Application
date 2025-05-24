@@ -51,4 +51,4 @@ This section guides you through creating a Virtual Machine (EC2 instance) on AWS
    chmod 400 devops-project-key.pem
 4. SSH to the Machine with the location of the pem key and user
    ```bash
-   ssh -i "C:\Users\thakhilk\Downloads\my_pem_key.pem" ubuntu@<IP-Address>
+   ssh -i "C:\Home\Users\Downloads\my_pem_key.pem" ubuntu@<IP-Address>
