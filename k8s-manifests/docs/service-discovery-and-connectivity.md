@@ -58,6 +58,10 @@ nslookup postgres-service
 ```
 This confirmed the backend could resolve service names to internal IPs correctly.
 
+## Outputs:
+![Screenshot 2025-05-25 011647](https://github.com/user-attachments/assets/fff2ad3c-ce9d-4c8b-a397-674be1099f9f)
+![Screenshot 2025-05-25 011938](https://github.com/user-attachments/assets/2c9be808-dad8-4c53-b38d-d96c0a3de689)
+
 ---
 ## 🧠 Common Issues & Fixes
 
@@ -69,9 +73,6 @@ This confirmed the backend could resolve service names to internal IPs correctly
 | `ImagePullBackOff`              | Incorrect image name/tag or image not pushed to Docker Hub | Rebuilt image and pushed to Docker Hub with correct tag            |
 | `CrashLoopBackOff`              | App failing due to missing dependency (e.g., DB not ready) | Used readiness probe or init container to delay backend startup     |
 
-## Outputs:
-![Screenshot 2025-05-25 011647](https://github.com/user-attachments/assets/fff2ad3c-ce9d-4c8b-a397-674be1099f9f)
-![Screenshot 2025-05-25 011938](https://github.com/user-attachments/assets/2c9be808-dad8-4c53-b38d-d96c0a3de689)
 
 
 ## 📌 Conclusion: 
