@@ -30,28 +30,35 @@ cd frontend/
 
 ### Step 2: Write Dockerfile for Frontend Microservice
 
-**Step by Step Explaination**
+**Step-by-step Explanation**
 
 `FROM node:18-alpine`
-- Uses the official Node.js v18 image based on Alpine Linux, a lightweight and secure base image perfect for frontend apps.
-  
+
+- Uses the official Node.js 18 image based on Alpine Linux. Alpine is a minimal, lightweight Linux distribution that helps keep container sizes small and boot times fast — ideal for frontend builds.
+
 `WORKDIR /app`
-- Sets the working directory in the container to /app. All commands and file paths after this will be relative to this directory.
-  
+
+- Sets the working directory inside the container to /app. All subsequent commands (like copying files or running npm) are executed relative to this directory.
+
 `COPY package*.json ./`
-- Copies package.json and package-lock.json into the container. These files define the application's dependencies.
-  
+
+- Copies package.json and package-lock.json from your local machine to the container. These files list project dependencies, scripts, and metadata.
+
 `RUN npm install`
-- Installs all required Node.js dependencies listed in package.json.
-  
+
+- Installs all project dependencies inside the container. This is a key step to prepare the frontend app (especially if it uses React, Vue, etc.).
+
 `COPY . .`
-- Copies the remaining application source code into the container.
-  
+
+- Copies all remaining frontend source code and assets into the container’s working directory.
+
 `EXPOSE 3000`
-- Informs Docker that the container will listen on port 3000. This is commonly used by frontend dev servers (e.g., React).
-  
+
+- Specifies that the application inside the container will run and listen on port 3000. This is the default port for many frontend development servers (e.g., React’s development server).
+
 `CMD ["npm", "start"]`
-- Specifies the command to run the application. It starts the frontend server using the start script from package.json.
+
+- Defines the command that runs when the container starts. It runs the start script defined in your package.json, which typically starts the frontend server.
   
 ### Step 3 : Build the Docker Image
 
