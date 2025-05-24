@@ -59,25 +59,22 @@ spec:
 
 ## Troubleshooting
 
-1. Check deployment status:
-
+**1. Check deployment status:**
 ```bash
 kubectl get deployments
 ```
-2. Describe deployment details and events:
 
+**2. Describe deployment details and events:**
 ```bash
 kubectl describe deployment <deployment-name>
 ```
 
-3. Monitor rollout progress:
-
+**3. Monitor rollout progress:**
 ```bash
 kubectl rollout status deployment/<deployment-name>
 ```
 
-4. Rollback a deployment if needed:
-
+**4. Rollback a deployment if needed:**
 ```bash
 kubectl rollout undo deployment/<deployment-name>
 ```
@@ -133,15 +130,15 @@ spec:
 
 ## Troubleshooting Connectivity
 
-1. To check service details and assigned IPs/ports.
+**1. To check service details and assigned IPs/ports.**
 ```bash
 kubectl get svc 
 ```
 
-2. To see endpoints and event details.
+**2. To see endpoints and event details.**
 ```bash
 kubectl describe svc <service-name>
 ```
 
-3. Test connectivity by curl or ping between pods using service names.
-4. Debug DNS issues using tools like nslookup or dig inside pods.
+**3. Test connectivity by curl or ping between pods using service names.**
+**4. Debug DNS issues using tools like nslookup or dig inside pods.**
