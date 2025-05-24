@@ -1,4 +1,3 @@
-# Stage 1: Build stage (optional for Node.js + Express, just install deps)
 FROM node:18-alpine
 
 WORKDIR /app
