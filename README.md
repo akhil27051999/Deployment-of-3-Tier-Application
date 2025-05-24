@@ -7,16 +7,20 @@ This project demonstrates a complete DevOps lifecycle for a simple 3-tier micros
 The project simulates a real-world CI/CD pipeline and production-ready environment on the cloud (AWS), integrating:
 
 - Source Control: GitHub
-
 - CI/CD Tools: GitHub Actions (CI), GitLab + ArgoCD (CD with GitOps)
-
 - Containerization: Docker
-
 - Orchestration: Kubernetes (on AWS EC2)
-
 - Monitoring: Prometheus + Grafana
-
 - Artifact Registry: Docker Hub
+
+## 📂 Directory Overview
+
+- frontend/ – Frontend app + Dockerfile
+- backend/ – API service + Dockerfile
+- db/ – PostgreSQL with init.sql
+- k8s-manifests/ – Kubernetes YAMLs (in GitLab)
+- .github/workflows/ – GitHub Actions CI pipeline
+- README.md – Project documentation
 
 ## 📁 Project Structure
 
