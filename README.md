@@ -1,4 +1,4 @@
-# PROJECT : DevOps End-to-End Deployment for 3-Tier Application
+# PROJECT : DevOps End-to-End Deployment for 3-Tier Application From Development to Production
 
 ## Project Summary
 
@@ -64,12 +64,6 @@ devops-project/
 └── README.md                       # Project documentation
 
 ```
-
-# DevOps Real-Time Project: Microservices from Development to Production
-
-This project demonstrates a complete end-to-end DevOps pipeline for a simple three-microservice application (frontend, backend, database). The pipeline covers infrastructure provisioning, containerization, orchestration, CI/CD automation, and monitoring.
-
----
 
 ## Project Section-wise Overview
 
