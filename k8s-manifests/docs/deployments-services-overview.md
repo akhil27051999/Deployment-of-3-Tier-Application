@@ -144,6 +144,35 @@ kubectl describe svc <service-name>
 
 **4. Debug DNS issues using tools like nslookup or dig inside pods.**
 
+## How They Work Together
+
+### 📦 PostgreSQL – DB Layer
+
+- `postgres-deployment.yaml` : Runs the official PostgreSQL image
+- Sets environment variables like: `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`
+- Port exposed: `5432`
+
+- `postgres-service.yaml` : Internal ClusterIP service
+-  Used by backend to connect via postgres-service:5432
+
+### 🔧 Backend – API Layer
+- `backend-deployment.yaml` : Custom image (e.g., Flask/Django/Node)
+- Uses `DB_HOST=postgres-service` to connect to the DB
+- Port exposed: `5000`
+- Replicas: `2` (for high availability)
+
+- `backend-service.yaml` : Exposes backend internally via ClusterIP
+- Frontend uses `http://backend-service:5000` to reach backend
+
+### 🎨 Frontend – UI Layer
+- `frontend-deployment.yaml` : Container for frontend (React, Vue, Angular, etc.)
+- Sets `BACKEND_URL=http://backend-service:5000`
+- Port exposed: `3000`
+
+- `frontend-service.yaml` : NodePort service
+- Makes UI accessible from outside the cluster
+- Port `80` → container port `3000`
+
 
 ## Expected Output
 ![Screenshot 2025-05-25 003103](https://github.com/user-attachments/assets/c1740ffc-5b95-4b6a-9a70-f5f05c85646d)
