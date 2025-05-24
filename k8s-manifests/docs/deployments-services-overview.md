@@ -153,7 +153,7 @@ kubectl describe svc <service-name>
 - Port exposed: `5432`
 
 - `postgres-service.yaml` : Internal ClusterIP service
--  Used by backend to connect via postgres-service:5432
+-  Used by backend to connect via postgres-service:`5432`
 
 ### 🔧 Backend – API Layer
 - `backend-deployment.yaml` : Custom image (e.g., Flask/Django/Node)
