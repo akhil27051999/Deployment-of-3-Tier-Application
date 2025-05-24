@@ -1,8 +1,9 @@
-PROJECT : Three Tier Microservices Architechture From Development to Production
+# PROJECT : Three Tier Microservices Architechture From Development to Production
 
+## Project Summary
 This project demonstrates a real-time DevOps workflow by deploying a 3-tier application (Frontend, Backend, and Database) on AWS using Docker, Kubernetes, GitHub Actions, GitLab, ArgoCD, Prometheus, and Grafana.
 
-Project Structure
+## Project Structure
 '''
 devops-project/
 │
