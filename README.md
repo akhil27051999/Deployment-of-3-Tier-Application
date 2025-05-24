@@ -9,13 +9,11 @@ This project demonstrates a complete DevOps lifecycle for a simple 3-tier micros
 | **Function**          | **Tool(s)**                     |
 |-----------------------|--------------------------------|
 | **Source Control**    | **GitHub**                     |
-| **CI/CD Tools**       | **GitHub Actions (CI), GitLab + ArgoCD (CD with GitOps)** |
 | **Containerization**  | **Docker**                     |
 | **Orchestration**     | **Kubernetes (on AWS EC2)**    |
-| **Monitoring**        | **Prometheus + Grafana**       |
 | **Artifact Registry** | **Docker Hub**                 |
-
-
+| **CI/CD Tools**       | **GitHub Actions (CI), GitLab + ArgoCD (CD with GitOps)** |
+| **Monitoring**        | **Prometheus + Grafana**       |
 
 ## 📂 Directory Overview
 
