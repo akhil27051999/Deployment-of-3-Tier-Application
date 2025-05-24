@@ -45,7 +45,7 @@ The backend requires environment variables to connect to the PostgreSQL database
 
 These are passed when running the container.
 
-### Step 4 : Set Environment Variables
+### Step 4 : Run the Docker Container
 
 ```bash
 docker run -d \
