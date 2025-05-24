@@ -62,8 +62,8 @@ The backend requires environment variables to connect to the PostgreSQL database
 - `POSTGRES_PASSWORD`
 - `POSTGRES_DB`
 - `POSTGRES_HOST`
-
 These are passed when running the container.
+
 ---
 ### Step 5 : Run the Docker Container
 
