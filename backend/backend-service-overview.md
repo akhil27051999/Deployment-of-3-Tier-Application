@@ -16,7 +16,7 @@ The `backend/` directory contains the following files:
 
 ---
 
-## 🐳 Docker Containerization
+## 🐳 Docker Containerization of Backend Microservice
 
 Follow the steps below to build and run the backend microservice inside a Docker container.
 
@@ -44,3 +44,24 @@ The backend requires environment variables to connect to the PostgreSQL database
 - `POSTGRES_HOST`
 
 These are passed when running the container.
+
+### Step 4 : Set Environment Variables
+
+```bash
+docker run -d \
+  -p 5000:5000 \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=password \
+  -e POSTGRES_DB=mydb \
+  -e POSTGRES_HOST=host.docker.internal \
+  --name backend-container \
+  backend-service
+```
+
+- `-d`: Detached mode
+- `-p 5000:5000`: Exposes port 5000
+- `-e`: Sets the required environment variables
+- '--name`: Names the container backend-container
+- `backend-service`: Image built in Step 2
+
+
