@@ -12,7 +12,6 @@ The `backend/` directory contains the following files:
 | `package.json`   | Project metadata and dependencies. Defines how the app should start.   |
 | `Dockerfile`     | Instructions to build a Docker image for the backend service.          |
 
----
 
 ## 🐳 Docker Containerization of Backend Microservice
 
