@@ -1,31 +1,55 @@
-# PROJECT : Three Tier Microservices Architechture From Development to Production
+# PROJECT : DevOps End-to-End Deployment for 3-Tier Application
 
 ## Project Summary
-This project demonstrates a real-time DevOps workflow by deploying a 3-tier application (Frontend, Backend, and Database) on AWS using Docker, Kubernetes, GitHub Actions, GitLab, ArgoCD, Prometheus, and Grafana.
+
+This project demonstrates a complete DevOps lifecycle for a simple 3-tier microservices application — consisting of a frontend, backend, and PostgreSQL database — deployed from development to production using modern DevOps tools and best practices.
+
+The project simulates a real-world CI/CD pipeline and production-ready environment on the cloud (AWS), integrating:
+
+- Source Control: GitHub
+
+- CI/CD Tools: GitHub Actions (CI), GitLab + ArgoCD (CD with GitOps)
+
+- Containerization: Docker
+
+- Orchestration: Kubernetes (on AWS EC2)
+
+- Monitoring: Prometheus + Grafana
+
+- Artifact Registry: Docker Hub
 
 ## 📁 Project Structure
 
 ```text
 devops-project/
 │
-├── frontend/                 # Frontend application (React or HTML)
-│   └── Dockerfile            # Dockerfile to containerize frontend
+├── backend/                        # Backend microservice (Node.js)
+│   ├── Dockerfile                  # Dockerfile for backend container
+│   ├── app.js                      # Main backend application
+│   └── package.json                # Node.js dependencies
 │
-├── backend/                  # Backend API service (Node.js or Python)
-│   └── Dockerfile            # Dockerfile to containerize backend
+├── db/                             # PostgreSQL database
+│   └── init.sql                    # SQL script to initialize DB
 │
-├── database/                 # Database setup (PostgreSQL)
-│   └── init.sql              # Initialization SQL script for DB
+├── frontend/                       # Frontend microservice (React/JS)
+│   ├── Dockerfile                  # Dockerfile for frontend container
+│   ├── app.js                      # Main frontend application
+│   └── package.json                # Frontend dependencies
 │
-├── k8s-manifests/            # GitLab repository (used for ArgoCD GitOps)
+├── k8s-manifests/                  # Kubernetes manifests (used in GitLab)
 │   └── apps/
-│       ├── frontend/         # Kubernetes manifests for frontend
-│       ├── backend/          # Kubernetes manifests for backend
-│       └── db/               # Kubernetes manifests for PostgreSQL
+│       ├── frontend/
+│       │   ├── deployment.yaml
+│       │   └── service.yaml
+│       ├── backend/
+│       │   ├── deployment.yaml
+│       │   └── service.yaml
+│       └── db/
+│           ├── deployment.yaml
+│           └── service.yaml
 │
 ├── .github/
-│   └── workflows/            # GitHub Actions CI pipeline
-│       └── ci-cd.yml         # Workflow for CI and image push + GitLab sync
+│   └── workflows/
+│       └── ci-cd.yml               # GitHub Actions CI for build & push
 │
-└── README.md                 # Project documentation
-
+└── README.md                       # Project documentation
