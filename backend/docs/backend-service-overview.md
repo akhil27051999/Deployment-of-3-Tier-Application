@@ -15,13 +15,14 @@ The `backend/` directory contains the following files:
 
 ## 🐳 Docker Containerization of Backend Microservice
 
-Follow the steps below to build and run the backend microservice inside a Docker container.
+**Follow the steps below to build and run the backend microservice inside a Docker container.**
 
 ### Step 1: Navigate to the Backend Directory
 
 ```bash
 cd backend/
 ```
+---
 ### Step 2: Write Dockerfile for Backend Microservice
 
 **Step-by-step Explanation:**
@@ -46,13 +47,13 @@ cd backend/
 
 `CMD ["node", "app.js"]`
 - Specifies the command to start your backend service when the container runs — here, it runs app.js with Node.js.
-
+---
 ### Step 3 : Build the Docker Image
 
 ```bash
 docker build -t backend-service .
 ```
-
+---
 ### Step 4 : Set Environment Variables
 
 The backend requires environment variables to connect to the PostgreSQL database:
@@ -63,7 +64,7 @@ The backend requires environment variables to connect to the PostgreSQL database
 - `POSTGRES_HOST`
 
 These are passed when running the container.
-
+---
 ### Step 5 : Run the Docker Container
 
 ```bash
@@ -81,13 +82,13 @@ docker run -d \
 - `-e`: Sets the required environment variables
 - `--name`: Names the container backend-container
 - `backend-service`: Image built in Step 2
-
+---
 ### Step 6: Verify Backend is Running
 
 ```bash
 curl http://localhost:5000
 ```
-
+---
 ### Expected output
 
 ![Screenshot 2025-05-24 134130](https://github.com/user-attachments/assets/c3dc4e3b-c06f-4af5-b258-fe446f4e829f)
