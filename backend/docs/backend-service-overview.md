@@ -17,8 +17,6 @@ The `backend/` directory contains the following files:
 
 Follow the steps below to build and run the backend microservice inside a Docker container.
 
----
-
 ### Step 1: Navigate to the Backend Directory
 
 ```bash
