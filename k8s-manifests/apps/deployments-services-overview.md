@@ -51,7 +51,7 @@ spec:
 4. `Rollback`: Easy rollback to previous versions if something breaks.
 5. `Scaling`: Increase or decrease pod replicas based on demand.
 
-## How We Used Deployments
+## How we used Deployments in our Project
 
 - Created Deployments for PostgreSQL database, backend API, and frontend UI.
 - Managed independent lifecycle and updates for each microservice.
@@ -125,7 +125,7 @@ spec:
     targetPort: 5000
 ```
 
-## How We Used Services
+## How we used Services in our Project
 
 1. Created ClusterIP services for backend and PostgreSQL to enable internal communication.
 2. Created NodePort service for frontend to expose it outside the cluster on a node port.
