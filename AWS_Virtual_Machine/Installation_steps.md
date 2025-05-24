@@ -1,0 +1,51 @@
+## Section 1: Provisioning AWS EC2 Virtual Machine and SSH Access
+
+This section guides you through creating a Virtual Machine (EC2 instance) on AWS and connecting to it securely via SSH.
+
+---
+
+### Step 1: Sign in to AWS Management Console
+
+1. Open [AWS Console](https://aws.amazon.com/console/).
+2. Sign in with your AWS account credentials.
+
+---
+
+### Step 2: Launch an EC2 Instance
+
+1. Navigate to **EC2 Dashboard** by searching "EC2" in the AWS Console.
+2. Click **Launch Instance**.
+3. Configure the instance:
+   - **Name**: `devops-project-vm`
+   - **AMI**: Choose **Amazon Linux 2 AMI** or **Ubuntu Server 22.04 LTS**
+   - **Instance Type**: Choose `t2.micro` (eligible for free tier)
+4. Click **Next: Configure Instance Details** and accept defaults.
+5. Click **Next: Add Storage** (default 8GB is fine).
+6. Click **Next: Add Tags** and add a tag if desired.
+7. Click **Next: Configure Security Group**:
+   - Create a new security group.
+   - Add rules:
+     - **SSH**: TCP, port 22, source: your IP (or anywhere `0.0.0.0/0` but less secure)
+     - **HTTP** (optional for frontend app): TCP, port 80, source: anywhere
+     - **Custom TCP** (optional for backend ports)
+8. Review and **Launch**.
+
+---
+
+### Step 3: Create or Use an Existing Key Pair
+
+- Choose **Create a new key pair**.
+- Name it `devops-project-key`.
+- Download the `.pem` file and save it securely.
+- You will use this key to SSH into the VM.
+- Click **Launch Instances**.
+
+---
+
+### Step 4: Connect to Your EC2 Instance via SSH
+
+1. Find your instance’s **Public IPv4** address from EC2 dashboard.
+2. Open a terminal on your local machine.
+3. Change permissions for the `.pem` file:
+   ```bash
+   chmod 400 devops-project-key.pem
