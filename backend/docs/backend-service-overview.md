@@ -27,14 +27,38 @@ Follow the steps below to build and run the backend microservice inside a Docker
 ```bash
 cd backend/
 ```
+### Step 2: Write Dockerfile
 
-### Step 2 : Build the Docker Image
+**Step-by-step Explanation:**
+
+1. `FROM node:18-alpine`
+- Uses the official Node.js 18 image based on Alpine Linux. Alpine is a minimal, lightweight Linux distribution which makes the image smaller and faster to download.
+
+`WORKDIR /app`
+- Sets the working directory inside the container to /app. All subsequent commands will be run relative to this directory.
+
+`COPY package.json ./*`
+- Copies package.json and package-lock.json (if available) from your local project directory to the container. These files specify the Node.js dependencies.
+
+`RUN npm install`
+- Installs the Node.js dependencies inside the container based on the copied package.json. Doing this before copying the full source code helps leverage Docker layer caching and speeds up rebuilds when dependencies don’t change.
+
+`COPY . `.
+- Copies the rest of your backend source code files into the working directory /app in the container.
+
+`EXPOSE 4000`
+- Declares that the container will listen on port 4000 at runtime. This is the port your backend service runs on.
+
+`CMD ["node", "app.js"]`
+- Specifies the command to start your backend service when the container runs — here, it runs app.js with Node.js.
+
+### Step 3 : Build the Docker Image
 
 ```bash
 docker build -t backend-service .
 ```
 
-### Step 3 : Set Environment Variables
+### Step 4 : Set Environment Variables
 
 The backend requires environment variables to connect to the PostgreSQL database:
 
@@ -45,7 +69,7 @@ The backend requires environment variables to connect to the PostgreSQL database
 
 These are passed when running the container.
 
-### Step 4 : Run the Docker Container
+### Step 5 : Run the Docker Container
 
 ```bash
 docker run -d \
@@ -63,7 +87,7 @@ docker run -d \
 - `--name`: Names the container backend-container
 - `backend-service`: Image built in Step 2
 
-### Step 5: Verify Backend is Running
+### Step 6: Verify Backend is Running
 
 ```bash
 curl http://localhost:5000
