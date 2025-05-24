@@ -78,6 +78,7 @@ kubectl rollout status deployment/<deployment-name>
 ```bash
 kubectl rollout undo deployment/<deployment-name>
 ```
+---
 
 # Kubernetes Services
 
@@ -143,6 +144,8 @@ kubectl describe svc <service-name>
 **3. Test connectivity by curl or ping between pods using service names.**
 
 **4. Debug DNS issues using tools like nslookup or dig inside pods.**
+
+---
 
 ## How They Work Together
 
