@@ -17,12 +17,15 @@ This project demonstrates a complete DevOps lifecycle for a simple 3-tier micros
 
 ## 📂 Directory Overview
 
-- frontend/ – Frontend app + Dockerfile
-- backend/ – API service + Dockerfile
-- db/ – PostgreSQL with init.sql
-- k8s-manifests/ – Kubernetes YAMLs (in GitLab)
-- .github/workflows/ – GitHub Actions CI pipeline
-- README.md – Project documentation
+| Directory / File         | Description                                  |
+|-------------------------|----------------------------------------------|
+| `frontend/`             | Frontend application source code and Dockerfile |
+| `backend/`              | Backend API service source code and Dockerfile  |
+| `db/`                   | PostgreSQL database initialization script (`init.sql`) |
+| `k8s-manifests/`        | Kubernetes deployment manifests stored in GitLab  |
+| `.github/workflows/`    | GitHub Actions CI pipeline configurations        |
+| `README.md`             | Project documentation and instructions            |
+
 
 ## 📁 Project Structure
 
