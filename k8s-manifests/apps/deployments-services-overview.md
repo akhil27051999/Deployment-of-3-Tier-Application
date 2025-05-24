@@ -1,6 +1,6 @@
 # Kubernetes Deployments
 
-## Overview
+### Overview
 A Kubernetes Deployment is a resource that manages the lifecycle of pods and replica sets for your applications. It helps you declaratively update, scale, and maintain your app with high availability.
 
 ## Why Use Deployments?
@@ -84,7 +84,7 @@ kubectl rollout undo deployment/<deployment-name>
 
 # Kubernetes Services
 
-## Overview
+### Overview
 A Kubernetes Service is an abstraction that defines a logical set of pods and a policy to access them. It provides a stable IP address and DNS name for pods, enabling communication between different components of your application.
 
 ## Why Use Services?
