@@ -14,9 +14,9 @@ A Kubernetes Deployment is a resource that manages the lifecycle of pods and rep
 
 A typical deployment YAML includes:
 
-1. replicas: Number of pod instances.
-2. selector: Defines how to find pods managed by this deployment.
-3. template: Pod specification including container image, ports, and labels.
+1. `replicas`: Number of pod instances.
+2. `selector`: Defines how to find pods managed by this deployment.
+3. `template`: Pod specification including container image, ports, and labels.
 
 **Example snippet:**
 
@@ -83,7 +83,7 @@ kubectl rollout undo deployment/<deployment-name>
 ```
 
 # Kubernetes Services
-```
+
 Overview
 A Kubernetes Service is an abstraction that defines a logical set of pods and a policy to access them. It provides a stable IP address and DNS name for pods, enabling communication between different components of your application.
 
