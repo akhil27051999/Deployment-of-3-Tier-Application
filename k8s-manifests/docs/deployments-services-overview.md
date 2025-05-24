@@ -1,4 +1,4 @@
-# Kubernetes Deployments
+# 🚀 Kubernetes Deployments
 
 ### Overview
 A Kubernetes Deployment is a resource that manages the lifecycle of pods and replica sets for your applications. It helps you declaratively update, scale, and maintain your app with high availability.
