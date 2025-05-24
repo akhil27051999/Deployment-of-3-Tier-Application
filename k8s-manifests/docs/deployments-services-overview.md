@@ -143,3 +143,7 @@ kubectl describe svc <service-name>
 **3. Test connectivity by curl or ping between pods using service names.**
 
 **4. Debug DNS issues using tools like nslookup or dig inside pods.**
+
+
+## Expected Output
+![Screenshot 2025-05-25 003103](https://github.com/user-attachments/assets/c1740ffc-5b95-4b6a-9a70-f5f05c85646d)
