@@ -1,0 +1,148 @@
+# Kubernetes Deployments
+
+### Overview
+A Kubernetes Deployment is a resource that manages the lifecycle of pods and replica sets for your applications. It helps you declaratively update, scale, and maintain your app with high availability.
+
+### Why Use Deployments?
+1. Ensure our app runs the desired number of replicas.
+2. Enable rolling updates for zero downtime deployments.
+3. Automatically replace failed pods (self-healing).
+4. Easily rollback to previous versions if needed.
+5. Declaratively manage our app state.
+
+### Deployment YAML Structure
+
+A typical deployment YAML includes:
+
+1. replicas: Number of pod instances.
+2. selector: Defines how to find pods managed by this deployment.
+3. template: Pod specification including container image, ports, and labels.
+
+**Example snippet:**
+
+```yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: backend:1.0
+        ports:
+        - containerPort: 5000
+```
+
+### Lifecycle
+
+1. `Creation`: Kubernetes creates ReplicaSets and pods.
+2. `Monitoring`: Pods are continuously monitored and restarted if necessary.
+3. `Updates`: Rolling updates allow seamless version changes.
+4. `Rollback`: Easy rollback to previous versions if something breaks.
+5. `Scaling`: Increase or decrease pod replicas based on demand.
+
+### How We Used Deployments
+
+- Created Deployments for PostgreSQL database, backend API, and frontend UI.
+- Managed independent lifecycle and updates for each microservice.
+- Ensured high availability and scalability.
+
+### Troubleshooting
+
+1. Check deployment status:
+
+```bash
+kubectl get deployments
+```
+2. Describe deployment details and events:
+
+```bash
+kubectl describe deployment <deployment-name>
+```
+
+3. Monitor rollout progress:
+
+```bash
+kubectl rollout status deployment/<deployment-name>
+```
+
+4. Rollback a deployment if needed:
+
+```bash
+kubectl rollout undo deployment/<deployment-name>
+```
+
+# Kubernetes Services
+```
+Overview
+A Kubernetes Service is an abstraction that defines a logical set of pods and a policy to access them. It provides a stable IP address and DNS name for pods, enabling communication between different components of your application.
+
+Why Use Services?
+Enable reliable network access to pods despite pod restarts or rescheduling.
+
+Expose pods inside the cluster (ClusterIP) or outside the cluster (NodePort, LoadBalancer).
+
+Load balance traffic across multiple pods.
+
+Facilitate service discovery within the cluster.
+
+Types of Services
+ClusterIP (default): Exposes the service on an internal cluster IP. Accessible only within the cluster.
+
+NodePort: Exposes the service on each node’s IP at a static port. Accessible outside the cluster via <NodeIP>:<NodePort>.
+
+LoadBalancer: Provisions an external load balancer to expose the service outside the cluster (cloud environments).
+
+ExternalName: Maps the service to a DNS name.
+
+Service YAML Structure
+A typical service YAML includes:
+
+type: Service type (ClusterIP, NodePort, etc.).
+
+selector: Labels to identify the pods the service routes traffic to.
+
+ports: The ports exposed by the service and the target ports on pods.
+
+Example snippet:
+
+yaml
+Copy
+Edit
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  type: ClusterIP
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+How We Used Services
+Created ClusterIP services for backend and PostgreSQL to enable internal communication.
+
+Created NodePort service for frontend to expose it outside the cluster on a node port.
+
+Allowed frontend to communicate with backend and backend to communicate with the database via service DNS names.
+
+Troubleshooting Connectivity
+Use kubectl get svc to check service details and assigned IPs/ports.
+
+Use kubectl describe svc <service-name> to see endpoints and event details.
+
+Test connectivity by curl or ping between pods using service names.
+
+Debug DNS issues using tools like nslookup or dig inside pods.
