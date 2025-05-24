@@ -33,3 +33,14 @@ cd backend/
 ```bash
 docker build -t backend-service .
 ```
+
+### Step 3 : Set Environment Variables
+
+The backend requires environment variables to connect to the PostgreSQL database:
+
+POSTGRES_USER \
+POSTGRES_PASSWORD \
+POSTGRES_DB \
+POSTGRES_HOST \
+
+These are passed when running the container.
