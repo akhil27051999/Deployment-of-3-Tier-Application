@@ -4,16 +4,17 @@
 
 This project demonstrates a complete DevOps lifecycle for a simple 3-tier microservices application — consisting of a frontend, backend, and PostgreSQL database — deployed from development to production using modern DevOps tools and best practices.
 
- ## 🛠️ DevOps Tools Stack
+## 🛠️ DevOps Tools Stack
 
-| Function              | Tool(s)                          |
-|-----------------------|----------------------------------|
-| Source Control        | GitHub                           |
-| CI/CD Tools           | GitHub Actions (CI), GitLab + ArgoCD (CD with GitOps) |
-| Containerization      | Docker                           |
-| Orchestration         | Kubernetes (on AWS EC2)          |
-| Monitoring            | Prometheus + Grafana             |
-| Artifact Registry     | Docker Hub                       |
+| **Function**          | **Tool(s)**                     |
+|-----------------------|--------------------------------|
+| **Source Control**    | **GitHub**                     |
+| **CI/CD Tools**       | **GitHub Actions (CI), GitLab + ArgoCD (CD with GitOps)** |
+| **Containerization**  | **Docker**                     |
+| **Orchestration**     | **Kubernetes (on AWS EC2)**    |
+| **Monitoring**        | **Prometheus + Grafana**       |
+| **Artifact Registry** | **Docker Hub**                 |
+
 
 
 ## 📂 Directory Overview
