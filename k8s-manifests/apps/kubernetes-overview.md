@@ -19,6 +19,7 @@
 ### Tool 1: kubectl
 
 **What is kubectl?**
+
 kubectl is the official Kubernetes CLI (Command Line Interface) tool that allows you to interact with your Kubernetes cluster. It's like git for Kubernetes — everything from deploying applications to inspecting pods happens through this tool.
 
 **Why do we install kubectl?**
@@ -36,6 +37,7 @@ kubectl version --client
 ### Tool 2: kind (Kubernetes in Docker)
 
 **What is kind?**
+
 kind stands for Kubernetes IN Docker. It lets you run a full Kubernetes cluster locally using Docker containers as nodes. It's fast and ideal for development and testing purposes.
 
 **Why use kind?**
