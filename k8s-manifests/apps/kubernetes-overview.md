@@ -1,13 +1,13 @@
 ### What is Kubernetes (K8s)?
-• Kubernetes is an open-source platform to automate deploying, scaling, and managing containerized applications.
-• It manages your Docker containers across multiple hosts, ensuring your app is highly available and scalable.
-• Think of Kubernetes as the orchestrator that runs and manages your containers in production.
+- Kubernetes is an open-source platform to automate deploying, scaling, and managing containerized applications.
+- It manages your Docker containers across multiple hosts, ensuring your app is highly available and scalable.
+- Think of Kubernetes as the orchestrator that runs and manages your containers in production.
 
 ### Why Kubernetes?
-• Handles deployment, scaling, and updates automatically.
-• Manages container health and restarts failed containers.
-• Provides load balancing and service discovery.
-• Manages persistent storage and configuration.
+- Handles deployment, scaling, and updates automatically.
+- Manages container health and restarts failed containers.
+- Provides load balancing and service discovery.
+- Manages persistent storage and configuration.
 
 ### What You Need Before Starting
 1. Docker images pushed to a container registry (Docker Hub or AWS ECR).
