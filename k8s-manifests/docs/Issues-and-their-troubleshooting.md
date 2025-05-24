@@ -82,10 +82,10 @@ kubectl get svc
 
 ## 🔍 Issue: Microservices Not Communicating
 
-## Symptom:
+### Symptom:
 Services can’t talk to each other (e.g., backend can’t reach DB or frontend can’t reach backend).
 
-## Troubleshooting Steps:
+### Troubleshooting Steps:
 
 **1. Verify Services Are Running:**
 
