@@ -124,7 +124,7 @@ Use Full Cluster DNS Names for Reliability:
 ```pgsql
 <service-name>.<namespace>.svc.cluster.local
 ```
-
+---
 ## Summary of Fixes Applied in Our Project
 
 | **Problem**                  | **Diagnosis**                           | **Fix**                                                                 |
