@@ -16,11 +16,11 @@ This section guides you through creating a Virtual Machine (EC2 instance) on AWS
 1. Navigate to **EC2 Dashboard** by searching "EC2" in the AWS Console.
 2. Click **Launch Instance**.
 3. Configure the instance:
-   - **Name**: `devops-project-vm`
+   - **Name**: `My EC2 Instance`
    - **AMI**: Choose **Amazon Linux 2 AMI** or **Ubuntu Server 22.04 LTS**
-   - **Instance Type**: Choose `t2.micro` (eligible for free tier)
+   - **Instance Type**: Choose `t3.micro` (eligible for free tier)
 4. Click **Next: Configure Instance Details** and accept defaults.
-5. Click **Next: Add Storage** (default 8GB is fine).
+5. Click **Next: Add Storage** (default 30GB is fine).
 6. Click **Next: Add Tags** and add a tag if desired.
 7. Click **Next: Configure Security Group**:
    - Create a new security group.
@@ -35,7 +35,7 @@ This section guides you through creating a Virtual Machine (EC2 instance) on AWS
 ### Step 3: Create or Use an Existing Key Pair
 
 - Choose **Create a new key pair**.
-- Name it `devops-project-key`.
+- Name it `my-pem-key`.
 - Download the `.pem` file and save it securely.
 - You will use this key to SSH into the VM.
 - Click **Launch Instances**.
@@ -49,3 +49,6 @@ This section guides you through creating a Virtual Machine (EC2 instance) on AWS
 3. Change permissions for the `.pem` file:
    ```bash
    chmod 400 devops-project-key.pem
+4. SSH to the Machine with the location of the pem key and user
+   ```bash
+   ssh -i "C:\Users\thakhilk\Downloads\my_pem_key.pem" ubuntu@<IP-Address>
