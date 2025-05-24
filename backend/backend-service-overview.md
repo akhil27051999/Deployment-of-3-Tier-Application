@@ -65,3 +65,10 @@ docker run -d \
 
 ### Step 5: Verify Backend is Running
 
+```bash
+curl http://localhost:5000
+```
+
+### Expected output
+
+![Screenshot 2025-05-24 134130](https://github.com/user-attachments/assets/c3dc4e3b-c06f-4af5-b258-fe446f4e829f)
