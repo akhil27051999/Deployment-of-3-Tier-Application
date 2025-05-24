@@ -41,9 +41,9 @@ kubectl version --client
 kind stands for Kubernetes IN Docker. It lets us run a full Kubernetes cluster locally using Docker containers as nodes. It's fast and ideal for development and testing purposes.
 
 **Why use kind?**
-- Lightweight and runs without needing a cloud provider.
-- Ideal for local testing of multi-service applications.
-- Works well with kubectl, so we can use standard Kubernetes YAML files.
+1. Lightweight and runs without needing a cloud provider.
+2. Ideal for local testing of multi-service applications.
+3. Works well with kubectl, so we can use standard Kubernetes YAML files.
 
 ```bash
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
