@@ -1,6 +1,6 @@
 ## Section 1: Provisioning AWS EC2 Virtual Machine and SSH Access
 
-This section guides you through creating a Virtual Machine (EC2 instance) on AWS and connecting to it securely via SSH.
+This section guides us through creating a Virtual Machine (EC2 instance) on AWS and connecting to it securely via SSH.
 
 ---
 
