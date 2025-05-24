@@ -2,8 +2,6 @@
 
 This document provides a step-by-step guide for understanding the frontend microservice and containerizing it using Docker.
 
----
-
 ## 📁 Directory Structure
 
 The `frontend/` directory contains the following files:
@@ -14,20 +12,18 @@ The `frontend/` directory contains the following files:
 | `package.json` | Project metadata and dependencies. Defines how the app should start. |
 | `Dockerfile`   | Instructions to build a Docker image for the frontend service.    |
 
----
 
 ## 🐳 Docker Containerization of Frontend Microservice
 
-Follow the steps below to build and run the frontend microservice inside a Docker container.
+**Follow the steps below to build and run the frontend microservice inside a Docker container.**
 
----
 
 ### Step 1: Navigate to the Frontend Directory
 
 ```bash
 cd frontend/
 ```
-
+---
 ### Step 2: Write Dockerfile for Frontend Microservice
 
 **Step-by-step Explanation**
@@ -59,13 +55,15 @@ cd frontend/
 `CMD ["npm", "start"]`
 
 - Defines the command that runs when the container starts. It runs the start script defined in your package.json, which typically starts the frontend server.
-  
+
+---
 ### Step 3 : Build the Docker Image
 
 ```bash
 docker build -t frontend-service .
 ```
 
+---
 ### Step 4 : Run the Docker Container
 
 ```bash
@@ -79,12 +77,12 @@ docker run -d \
 - `--name frontend-container`: Name the container for easier management
 - `frontend-service`: Docker image built in Step 2
 
-
+---
 ### Step 5: Verify Frontend is Running
 
 ```bash
 curl http://localhost:3000
 ```
-
+---
 ### Expected Output
 ![Screenshot 2025-05-24 131101](https://github.com/user-attachments/assets/07b38abf-b7a8-4392-b50a-9ca1b97429f3)
