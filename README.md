@@ -83,7 +83,7 @@ devops-project/
 - Created Dockerfiles for each microservice: frontend, backend, and database.
 - Built Docker images locally for all services.
 - Ran and tested Docker containers on the VM to verify application functionality.
-- (Optional) Pushed Docker images to Docker Hub for easy distribution and later use in Kubernetes.
+- Pushed Docker images to Docker Hub for easy distribution and later use in Kubernetes.
 
 ---
 
