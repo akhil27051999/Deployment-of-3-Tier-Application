@@ -170,8 +170,7 @@ kubectl describe svc <service-name>
 - Port exposed: `3000`
 
 - `frontend-service.yaml` : NodePort service
-- Makes UI accessible from outside the cluster
-- Port `80` → container port `3000`
+- Makes UI accessible from outside the cluster : Port `80` → container port `3000`
 
 
 ## Expected Output
