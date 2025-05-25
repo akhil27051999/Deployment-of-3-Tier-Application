@@ -1,6 +1,6 @@
 ## 🔍 Service Discovery & Microservices Connectivity in Kubernetes
 
-In our 3-tier microservices architecture (Frontend ↔ Backend ↔ PostgreSQL DB), Kubernetes **Service Discovery** plays a vital role in enabling seamless communication between the components.
+**In our 3-tier microservices architecture (Frontend ↔ Backend ↔ PostgreSQL DB), Kubernetes **Service Discovery** plays a vital role in enabling seamless communication between the components.**
 
 ### Overview
 
