@@ -106,11 +106,11 @@ devops-project/
 
 ---
 
-### Section 5: Continuous Delivery (CD) with GitLab and ArgoCD
+### Section 5: Continuous Delivery (CD) with ArgoCD
 
-- Stored Kubernetes manifests in a GitLab repository to act as the GitOps source.
-- Installed and configured ArgoCD to watch GitLab manifests and sync deployments to Kubernetes.
-- Established a Continuous Delivery pipeline via GitLab that triggers ArgoCD sync upon manifest changes.
+- Stored Kubernetes manifests in a Github repository to act as the GitOps source.
+- Installed and configured ArgoCD to watch Github manifests and sync deployments to Kubernetes.
+- Established a Continuous Delivery pipeline via Github that triggers ArgoCD sync upon manifest changes.
 - Automated deployment of new application versions with zero manual intervention.
 
 ---
