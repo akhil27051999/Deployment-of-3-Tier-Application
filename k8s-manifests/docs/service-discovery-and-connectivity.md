@@ -63,17 +63,6 @@ This confirmed the backend could resolve service names to internal IPs correctly
 ![Screenshot 2025-05-25 011938](https://github.com/user-attachments/assets/2c9be808-dad8-4c53-b38d-d96c0a3de689)
 
 ---
-## 🧠 Common Issues & Fixes
-
-| Issue                           | Cause                                   | Fix                                                                 |
-|----------------------------------|------------------------------------------|----------------------------------------------------------------------|
-| `curl: Couldn't resolve host`   | Wrong service name or DNS misconfiguration | Used `nslookup` to verify correct service DNS name                  |
-| `Connection refused`            | Service not exposed or incorrect port     | Verified service YAML for correct port and service type             |
-| Frontend couldn't reach backend | Frontend service was `ClusterIP` instead of externally accessible | Changed frontend service to `NodePort` for external browser access |
-| `ImagePullBackOff`              | Incorrect image name/tag or image not pushed to Docker Hub | Rebuilt image and pushed to Docker Hub with correct tag            |
-| `CrashLoopBackOff`              | App failing due to missing dependency (e.g., DB not ready) | Used readiness probe or init container to delay backend startup     |
-
-
 
 ## 📌 Conclusion: 
 - Service discovery in Kubernetes enables microservices to communicate using predictable DNS names and service abstractions, removing the need for hardcoded IPs. 
