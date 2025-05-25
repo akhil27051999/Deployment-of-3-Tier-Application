@@ -33,7 +33,7 @@ chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 kubectl version --client
 ```
-
+---
 ### Tool-2: kind (Kubernetes in Docker)
 
 **What is kind?**
