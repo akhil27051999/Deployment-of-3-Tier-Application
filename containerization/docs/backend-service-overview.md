@@ -4,7 +4,7 @@
 
 ## 📁 Directory Structure
 
-The `backend/` directory contains the following files:
+**The `backend/` directory contains the following files:**
 
 | File/Folder     | Purpose                                                                 |
 |------------------|-------------------------------------------------------------------------|
