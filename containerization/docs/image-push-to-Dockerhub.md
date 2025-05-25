@@ -17,7 +17,7 @@ docker login
 ```
 Enter your Docker Hub username and personal access token (or password) when prompted.
 
-3. Build Docker Images for Each Service
+### 3. Build Docker Images for Each Service
 
 **Frontend:**
 
