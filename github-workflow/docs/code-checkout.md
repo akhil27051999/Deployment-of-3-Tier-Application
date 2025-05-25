@@ -58,10 +58,10 @@ ls -l
 
 **We should see something like:**
 
-`frontend/`
-`backend/`
-`db/`
-`README.md`
+- `frontend/`
+- `backend/`
+- `db/`
+- `README.md`
 
 Each folder represents one microservice.
 
