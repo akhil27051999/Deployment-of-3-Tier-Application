@@ -93,7 +93,7 @@ Services can’t talk to each other (e.g., backend can’t reach DB or frontend 
 kubectl get svc
 ```
 
-**2.DNS Lookup from Pod:**
+**2. DNS Lookup from Pod:**
 
 ```bash
 kubectl exec -it <pod-name> -- nslookup <service-name>
