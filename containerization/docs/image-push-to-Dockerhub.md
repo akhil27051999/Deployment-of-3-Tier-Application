@@ -1,6 +1,6 @@
 # 📦 Docker Image Build & Push to Docker Hub
 
-As part of deploying our microservices to Kubernetes, we containerized each service (frontend, backend, and PostgreSQL) and pushed the Docker images to Docker Hub so that they could be pulled and run by Kubernetes pods.
+**As part of deploying our microservices to Kubernetes, we containerized each service (frontend, backend, and PostgreSQL) and pushed the Docker images to Docker Hub so that they could be pulled and run by Kubernetes pods.**
 
 ---
 
