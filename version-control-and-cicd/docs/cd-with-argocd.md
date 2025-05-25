@@ -83,17 +83,17 @@ kubectl create namespace frontend
 - Check if Argo CD has synced the latest manifests successfully.
 - Verify resource manifests paths and repo URL are correct in Argo CD app settings.
 
-**Check Kubernetes events for failures:**
+**I. Check Kubernetes events for failures:**
 
 ```bash
 kubectl get events -n <namespace>
 ```
-Use:
+**II. To see deployment issues (e.g., image pull errors).**
 
 ```bash
 kubectl describe deployment <deployment-name> -n <namespace>
 ```
-to see deployment issues (e.g., image pull errors).
+
 
 ### 4. Pods Not Running or CrashLoopBackOff
 
