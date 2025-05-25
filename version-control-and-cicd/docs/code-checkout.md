@@ -1,6 +1,6 @@
-# SECTION - 2: Checking out Developer Code from Git!
+# 🗃️ Checking out Developer Code from Git!
 
-## 🗃️ What is Git?
+## What is Git?
 - Git is a version control system used to track changes in your code.
 - It allows multiple developers to collaborate by managing different versions of the code.
 - Git repositories (repos) can be hosted on platforms like GitHub, GitLab, or Bitbucket.
