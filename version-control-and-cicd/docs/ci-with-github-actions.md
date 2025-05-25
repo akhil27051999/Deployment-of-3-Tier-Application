@@ -1,6 +1,6 @@
-## ⚙️ CI Workflow Overview
+# ⚙️ CI Workflow Overview
 
-The CI pipeline defined in `.github/workflows/ci.yml` triggers on:
+**The CI pipeline defined in `.github/workflows/ci.yml` triggers on:**
 1. Push to main branch
 2. Pull request to main branch
 
