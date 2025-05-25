@@ -1,10 +1,10 @@
 # 📦 Frontend Microservice – Containerization Guide
 
-This document provides a step-by-step guide for understanding the frontend microservice and containerizing it using Docker.
+**This document provides a step-by-step guide for understanding the frontend microservice and containerizing it using Docker.**
 
 ## 📁 Directory Structure
 
-The `frontend/` directory contains the following files:
+**The `frontend/` directory contains the following files:**
 
 | File/Folder     | Purpose                                                           |
 |----------------|-------------------------------------------------------------------|
