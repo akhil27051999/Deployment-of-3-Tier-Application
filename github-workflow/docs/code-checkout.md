@@ -9,14 +9,14 @@
 - "Checking out" code means cloning or downloading the code from the Git repository to your local machine or VM.
 - This is the first step to get the application code so you can build, run, and deploy it.
 
-## what You Need Before Starting
+## what we need before Starting
 1. A GitHub/GitLab repository link (for your 3 microservices: frontend, backend, db).
 2. Git installed on your laptop or VM.
 3. Access to a terminal or command prompt on your machine or VM.
    
 ---
 
-### Step 1: Set up Git on your machine/VM
+### Step 1: Set up Git on our machine/VM
 
 If Git is not installed, install it first.
 - On Ubuntu/Linux VM:
@@ -29,8 +29,8 @@ sudo apt install git -y
 After installation, set our Git username and email. This is important for tracking commits.
 
 ```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
+git config --global user.name "our Name"
+git config --global user.email "our.email@example.com"
 ```
 
 ### Step 3: Clone the repository
