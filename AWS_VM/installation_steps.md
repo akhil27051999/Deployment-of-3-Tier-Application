@@ -34,11 +34,11 @@ This section guides us through creating a Virtual Machine (EC2 instance) on AWS 
 
 ### Step 3: Create or Use an Existing Key Pair
 
-- Choose **Create a new key pair**.
-- Name it `my-pem-key`.
-- Download the `.pem` file and save it securely.
-- You will use this key to SSH into the VM.
-- Click **Launch Instances**.
+1. Choose **Create a new key pair**.
+2. Name it `my-pem-key`.
+3. Download the `.pem` file and save it securely.
+4. You will use this key to SSH into the VM.
+5. Click **Launch Instances**.
 
 ---
 
