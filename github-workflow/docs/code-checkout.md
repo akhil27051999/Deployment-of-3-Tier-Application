@@ -13,6 +13,8 @@
 1. A GitHub/GitLab repository link (for your 3 microservices: frontend, backend, db).
 2. Git installed on your laptop or VM.
 3. Access to a terminal or command prompt on your machine or VM.
+   
+---
 
 ### Step 1: Set up Git on your machine/VM
 
@@ -37,7 +39,7 @@ we will use the git clone command with the repo URL to get the code.
 For example:
 
 ```bash
-git clone https://github.com/yourusername/your-microservices-project.git
+git clone https://github.com/ourusername/our-microservices-project.git
 ```
 This will create a folder named `Deployment-of-3-Tier-Application` in our current directory with all the code.
 
