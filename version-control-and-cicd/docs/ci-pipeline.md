@@ -4,7 +4,7 @@ The CI pipeline defined in `.github/workflows/ci.yml` triggers on:
 1. Push to main branch
 2. Pull request to main branch
 
-### What It Does
+**What It Does**
 1. Checks out code
 2. Sets up Docker Buildx
 3. Authenticates to Docker Hub
