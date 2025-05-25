@@ -1,6 +1,6 @@
 #  Kubernetes Troubleshooting Guide
 
-This section covers real-world issues encountered during deployment and how they were resolved.
+**This section covers real-world issues encountered during deployment and how they were resolved.**
 
 ## ❌ Issue: ImagePullBackOff / ErrImagePull
 
