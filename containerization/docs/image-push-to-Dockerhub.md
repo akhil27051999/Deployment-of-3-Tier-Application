@@ -52,6 +52,9 @@ In each Deployment YAML file, we referenced the images like this:
 containers:
   - name: backend
     image: akhil27051999/backend:v1
-
+```
 This ensures Kubernetes pulls the images directly from Docker Hub during pod creation.
 
+### Output:
+
+![Screenshot 2025-05-24 141234](https://github.com/user-attachments/assets/43a0d941-751e-409a-a0fd-24c60d88b1f3)
