@@ -57,6 +57,14 @@ kubectl port-forward svc/frontend 8080:80 -n default
 **4. Then access: `http://localhost:8080`**
 
 ---
+## Outputs:
+![Screenshot 2025-05-25 201337](https://github.com/user-attachments/assets/07abb512-9aec-4566-86f2-dbb54e6aad5c)
+
+![Screenshot 2025-05-25 202627](https://github.com/user-attachments/assets/6d2d439a-fe04-4980-a23d-456557fce834)
+![Screenshot 2025-05-25 202651](https://github.com/user-attachments/assets/535a1ab6-8ccb-41d1-ad92-8dd4fee88d95)
+![Screenshot 2025-05-25 202714](https://github.com/user-attachments/assets/198dc179-59ca-463c-8b9f-6a26c0892b7b)
+
+---
 ## Troubleshooting Steps
 
 ### 1. Application OutOfSync or SyncFailed
