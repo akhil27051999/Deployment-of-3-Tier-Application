@@ -14,10 +14,9 @@
 2. Kubernetes cluster (we will set it up on your AWS VM or use a managed Kubernetes service).
 3. kubectl CLI tool installed to interact with Kubernetes cluster
 
-## Step 1: 🛠️ Installing Kubernetes CLI Tools
+## 🛠️ Installing Kubernetes CLI Tools
 
 ### Tool-1: kubectl
-
 
 **What is kubectl?**
 
