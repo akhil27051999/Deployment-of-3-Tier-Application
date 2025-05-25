@@ -129,9 +129,9 @@ Use Full Cluster DNS Names for Reliability:
 
 | **Problem**                  | **Diagnosis**                           | **Fix**                                                                 |
 |-----------------------------|------------------------------------------|-------------------------------------------------------------------------|
-| `ImagePullBackOff`          | Wrong image name/tag                     | Rebuilt & pushed the correct Docker image to Docker Hub                |
+|   ImagePullBackOff          | Wrong image name/tag                     | Rebuilt & pushed the correct Docker image to Docker Hub                |
 | Backend crash loop          | PostgreSQL not ready at startup          | Used readiness probes and ensured proper service startup order         |
-| DNS resolution failed       | Incorrect service name or namespace      | Verified DNS with `nslookup` and used full DNS names                   |
+| DNS resolution failed       | Incorrect service name or namespace      | Verified DNS with  nslookup  and used full DNS names                   |
 | Frontend couldn't reach backend | Service type was ClusterIP             | Used `NodePort` for frontend and `ClusterIP` for internal services     |
 
 
