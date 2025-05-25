@@ -37,9 +37,11 @@ We create **three Argo CD Applications** for each component, pointing to their r
 ## How to Access Applications
 
 **1. Verify pods are running in the `default` namespace:**
-   ```bash
-   kubectl get pods -n default
-   
+
+```bash
+kubectl get pods -n default
+```
+
 **2. Check services in default namespace:**
 
 ```bash
@@ -59,7 +61,7 @@ kubectl port-forward svc/frontend 8080:80 -n default
 
 ### 1. Application OutOfSync or SyncFailed
 
-Check Argo CD UI or CLI for sync status and error messages:
+**Check Argo CD UI or CLI for sync status and error messages:**
 
 ```bash
 argocd app get <app-name>
@@ -68,7 +70,8 @@ argocd app get <app-name>
 - Fix: Ensure namespaces exist before syncing or update Argo CD app destination namespace.
 
 ### 2. Missing Namespace Error
-If error shows something like namespaces "frontend" not found, create namespace manually:
+
+**If error shows something like namespaces "frontend" not found, create namespace manually:**
 
 ```bash
 kubectl create namespace frontend
