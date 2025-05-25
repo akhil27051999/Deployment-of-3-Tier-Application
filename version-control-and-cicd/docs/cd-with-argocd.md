@@ -1,6 +1,6 @@
-# Argo CD Deployment for 3-Tier Application
+# 🤖 Argo CD Deployment for 3-Tier Application
 
-This section explains how the 3-tier application (frontend, backend, database) is deployed and managed using **Argo CD**.
+**This section explains how the 3-tier application (frontend, backend, database) is deployed and managed using Argo CD**.
 
 ---
 
