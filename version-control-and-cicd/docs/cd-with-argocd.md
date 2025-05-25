@@ -36,94 +36,90 @@ We create **three Argo CD Applications** for each component, pointing to their r
 
 ## How to Access Applications
 
-1. Verify pods are running in the `default` namespace:
+**1. Verify pods are running in the `default` namespace:**
    ```bash
    kubectl get pods -n default
-Check services in default namespace:
+   
+**2. Check services in default namespace:**
 
-bash
-Copy
-Edit
+```bash
 kubectl get svc -n default
-To test frontend locally, use port forwarding:
+```
 
-bash
-Copy
-Edit
+**3. To test frontend locally, use port forwarding:**
+
+```bash
 kubectl port-forward svc/frontend 8080:80 -n default
-Then access: http://localhost:8080
+```
 
-Troubleshooting Steps
-1. Application OutOfSync or SyncFailed
+**4. Then access: `http://localhost:8080`**
+
+---
+## Troubleshooting Steps
+
+### 1. Application OutOfSync or SyncFailed
+
 Check Argo CD UI or CLI for sync status and error messages:
 
-bash
-Copy
-Edit
+```bash
 argocd app get <app-name>
-Common cause: Kubernetes namespace missing or incorrect in manifests or Argo CD app spec.
+```
+- Common cause: Kubernetes namespace missing or incorrect in manifests or Argo CD app spec.
+- Fix: Ensure namespaces exist before syncing or update Argo CD app destination namespace.
 
-Fix: Ensure namespaces exist before syncing or update Argo CD app destination namespace.
-
-2. Missing Namespace Error
+### 2. Missing Namespace Error
 If error shows something like namespaces "frontend" not found, create namespace manually:
 
-bash
-Copy
-Edit
+```bash
 kubectl create namespace frontend
-Or change Argo CD application to deploy to existing namespace (default).
+```
+- Or change Argo CD application to deploy to existing namespace (default).
 
-3. Resources Not Created (No Pods or Services)
-Check if Argo CD has synced the latest manifests successfully.
+### 3. Resources Not Created (No Pods or Services)
 
-Verify resource manifests paths and repo URL are correct in Argo CD app settings.
+- Check if Argo CD has synced the latest manifests successfully.
+- Verify resource manifests paths and repo URL are correct in Argo CD app settings.
 
-Check Kubernetes events for failures:
+**Check Kubernetes events for failures:**
 
-bash
-Copy
-Edit
+```bash
 kubectl get events -n <namespace>
+```
 Use:
 
-bash
-Copy
-Edit
+```bash
 kubectl describe deployment <deployment-name> -n <namespace>
+```
 to see deployment issues (e.g., image pull errors).
 
-4. Pods Not Running or CrashLoopBackOff
-Describe pods for errors:
+### 4. Pods Not Running or CrashLoopBackOff
 
-bash
-Copy
-Edit
+**I. Describe pods for errors:**
+
+```bash
 kubectl describe pod <pod-name> -n <namespace>
-Check pod logs:
+```
+**II. Check pod logs:**
 
-bash
-Copy
-Edit
+```bash
 kubectl logs <pod-name> -n <namespace>
-5. Service Not Found or No Endpoints
-Confirm services exist:
+```
+### 5. Service Not Found or No Endpoints
 
-bash
-Copy
-Edit
+**I. Confirm services exist:**
+
+```bash
 kubectl get svc -n <namespace>
-Describe service to check ports and selectors:
+```
 
-bash
-Copy
-Edit
+**II. Describe service to check ports and selectors:**
+
+```bash
 kubectl describe svc <service-name> -n <namespace>
-Make sure deployment labels match service selector labels.
+```
+- Make sure deployment labels match service selector labels.
 
-Notes
-Make sure Argo CD has access to your GitHub repo URL and correct revision.
-
-Always check Argo CD application status after any changes.
-
-Sync apps manually after fixing issues or enable auto-sync with caution.
+### Key Notes
+- Make sure Argo CD has access to your GitHub repo URL and correct revision.
+- Always check Argo CD application status after any changes.
+- Sync apps manually after fixing issues or enable auto-sync with caution.
