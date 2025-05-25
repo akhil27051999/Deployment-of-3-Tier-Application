@@ -27,13 +27,13 @@ jobs:
       - name: Build and push backend Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./Deployment-of-3-Tier-Application/containerization/apps/backend
+          context: ./containerization/apps/backend
           push: true
           tags: akhilthyadi/my-backend:latest
 
       - name: Build and push frontend Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./Deployment-of-3-Tier-Application/containerization/apps/frontend
+          context: ./containerization/apps/frontend
           push: true
           tags: akhilthyadi/my-frontend:latest
