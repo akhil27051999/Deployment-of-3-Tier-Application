@@ -16,7 +16,7 @@
 
 ## 🛠️ Installing Kubernetes CLI Tools
 
-### Tool-1: kubectl
+## Tool-1: kubectl
 
 **What is kubectl?**
 
@@ -34,7 +34,7 @@ sudo mv kubectl /usr/local/bin/
 kubectl version --client
 ```
 ---
-### Tool-2: kind (Kubernetes in Docker)
+## Tool-2: kind (Kubernetes in Docker)
 
 **What is kind?**
 
