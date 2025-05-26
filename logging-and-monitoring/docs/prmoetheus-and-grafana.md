@@ -108,10 +108,10 @@ http://prometheus-server.monitoring.svc.cluster.local
 - Node Exporter Full	`1860`
 - Kube Prometheus Stack	`6417`
 - Kubernetes Cluster Monitoring	`315`
+![Screenshot 2025-05-26 122700](https://github.com/user-attachments/assets/59b0ad87-e6f2-46d4-8403-9f8f433beb54)
 ![Screenshot 2025-05-26 122253](https://github.com/user-attachments/assets/056c1c1a-5e9f-4915-83a2-b2d40cc2f157)
 ![Screenshot 2025-05-26 122400](https://github.com/user-attachments/assets/bd3e1e59-9c06-4c3b-8866-6aeb1f8840b7)
 ![Screenshot 2025-05-26 122504](https://github.com/user-attachments/assets/5e475287-aed4-4c0a-8641-bbaf22b2d263)
-![Screenshot 2025-05-26 122700](https://github.com/user-attachments/assets/59b0ad87-e6f2-46d4-8403-9f8f433beb54)
 ![Screenshot 2025-05-26 123223](https://github.com/user-attachments/assets/bf539ca9-6bfe-4598-9980-c0e92a195d95)
 **Steps:**
 
