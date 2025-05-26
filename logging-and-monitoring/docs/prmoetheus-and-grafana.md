@@ -32,13 +32,13 @@ helm repo update
 helm install prometheus prometheus-community/kube-prometheus-stack \
   --namespace monitoring --create-namespace
 ```
-### 1. Add Grafana Helm Repository
+### 3. Add Grafana Helm Repository
 ```bash
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 ```
 
-### 2. Install Grafana
+### 4. Install Grafana
 ```bash
 helm install grafana grafana/grafana \
   --namespace monitoring \
