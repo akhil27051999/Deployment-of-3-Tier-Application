@@ -69,7 +69,7 @@ kubectl get svc -n monitoring
 kubectl get pods -n monitoring
 ```
 **All pods (Prometheus, Grafana, exporters) should be in Running state.**
-
+---
 ## 🌐 Access Grafana Dashboard
 
 ### 1. Port Forward Grafana
@@ -112,7 +112,7 @@ http://prometheus-server.monitoring.svc.cluster.local
 ```
 
 **Save & Test — should show Data source is working.**
-
+---
 ## 📊 Import Grafana Dashboards
 
 ### Recommended Dashboard IDs (from Grafana.com)
@@ -133,7 +133,7 @@ http://prometheus-server.monitoring.svc.cluster.local
 ![Screenshot 2025-05-26 122504](https://github.com/user-attachments/assets/5e475287-aed4-4c0a-8641-bbaf22b2d263)
 ![Screenshot 2025-05-26 123223](https://github.com/user-attachments/assets/bf539ca9-6bfe-4598-9980-c0e92a195d95)
 
-
+---
 ## 🧰 Troubleshooting Summary
 
 **1. curl to NodePort failed	Used kubectl port-forward instead**
@@ -153,7 +153,7 @@ http://prometheus-server.monitoring.svc.cluster.local
 - ✅ Connected Prometheus as a data source
 - ✅ Imported and viewed real-time dashboards
 - ✅ Troubleshot service access issues and verified successful connections
-
+---
 ## 📂 Directory/Chart Details
 
 1. If we want to customize the chart:
@@ -167,8 +167,8 @@ helm show values prometheus-community/kube-prometheus-stack > custom-values.yaml
 ```bash
 helm upgrade --install prometheus -f custom-values.yaml prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
 ```
-
-📌 Useful Commands
+---
+## 📌 Useful Commands
 
 **1. Get all services**
 ```bash
