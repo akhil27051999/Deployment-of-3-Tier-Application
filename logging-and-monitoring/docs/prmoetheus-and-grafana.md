@@ -163,13 +163,18 @@ helm upgrade --install prometheus -f custom-values.yaml prometheus-community/kub
 kubectl get svc -n monitoring
 ```
 **2. Get Grafana password**
+```bash
 kubectl get secret -n monitoring prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 --decode
-
+```
 **3. Port forward Grafana**
+```bash
 kubectl port-forward -n monitoring svc/grafana 3001:80
+```
 
 **4. SSH tunnel from your laptop**
+```bash
 ssh -i "key.pem" -L 3001:127.0.0.1:3001 ubuntu@<your-ec2-ip>
+```
 
 ## 🧠 Final Notes
 
