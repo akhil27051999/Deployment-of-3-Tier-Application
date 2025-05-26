@@ -66,7 +66,7 @@ devops-project/
 ```
 
 ## Project Section-wise Overview
----
+
 ### Section 1: Provisioning AWS EC2 Virtual Machine and SSH Access
 
 - Created a Virtual Machine (VM) on AWS using the EC2 service.
