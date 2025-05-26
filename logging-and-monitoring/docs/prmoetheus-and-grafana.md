@@ -4,7 +4,7 @@ This document provides a complete walkthrough for deploying and configuring a **
 
 ---
 
-## ✅ Overview
+## Overview
 
 We installed the **Kube-Prometheus-Stack** (a Helm chart that bundles Prometheus, Grafana, Alertmanager, and exporters) and verified end-to-end monitoring of the Kubernetes cluster using **Grafana dashboards**.
 
@@ -26,158 +26,155 @@ We installed the **Kube-Prometheus-Stack** (a Helm chart that bundles Prometheus
 ```bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
-2. Install Kube Prometheus Stack
-bash
-Copy
-Edit
+```
+### 2. Install Kube Prometheus Stack
+
+```bash
 helm install prometheus prometheus-community/kube-prometheus-stack \
   --namespace monitoring --create-namespace
-This installs:
+```
+** This installs:**
+- `Prometheus server`
+- `Grafana`
+- `Node exporter`
+- `kube-state-metrics`
+- `Alertmanager`
 
-Prometheus server
+### 🔍 Verify Installation
 
-Grafana
-
-Node exporter
-
-kube-state-metrics
-
-Alertmanager
-
-🔍 Verify Installation
-List Services
-bash
-Copy
-Edit
+**1. List Services**
+```bash
 kubectl get svc -n monitoring
-You should see:
+```
+**You should see:**
+- `prometheus-server`
+- `prometheus-alertmanager`
+- `grafana`
+- `Others (exporters)`
 
-prometheus-server
-
-prometheus-alertmanager
-
-grafana
-
-Others (exporters)
-
-Check Pod Status
-bash
-Copy
-Edit
+**2. Check Pod Status**
+```bash
 kubectl get pods -n monitoring
-All pods (Prometheus, Grafana, exporters) should be in Running state.
+```
+**All pods (Prometheus, Grafana, exporters) should be in Running state.**
 
-🌐 Access Grafana Dashboard
-1. Port Forward Grafana
-bash
-Copy
-Edit
+## 🌐 Access Grafana Dashboard
+
+### 1. Port Forward Grafana
+```bash
 kubectl port-forward -n monitoring svc/grafana 3001:80
-2. SSH Tunnel from Local
+```
+
+### 2. SSH Tunnel from Local
 On your local machine:
 
-bash
-Copy
-Edit
+```bash
 ssh -i "your-key.pem" -L 3001:127.0.0.1:3001 ubuntu@<EC2_Public_IP>
-3. Open Grafana in Browser
-Navigate to:
-📎 http://localhost:3001
+```
 
-4. Default Credentials
-Username: admin
+### 3. Open Grafana in Browser
 
-Password: prom-operator (or fetch using below)
+**Navigate to:**
+'http://localhost:3001'
 
-bash
-Copy
-Edit
+### 4. Default Credentials
+
+- Username: `admin`
+- Password: `prom-operator` (or fetch using below)
+
+```bash
 kubectl get secret --namespace monitoring prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
-📉 Add Prometheus Data Source to Grafana
-If not preconfigured:
+```
 
-Navigate to Settings → Data Sources
+## 📉 Add Prometheus Data Source to Grafana
 
-Add Prometheus
+### If not preconfigured:
+
+**Navigate to Settings → Data Sources**
+`Add Prometheus`
 
 URL:
-
-pgsql
-Copy
-Edit
+ 
+```pgsql
 http://prometheus-server.monitoring.svc.cluster.local
-Save & Test — should show Data source is working.
+```
 
-📊 Import Grafana Dashboards
-Recommended Dashboard IDs (from Grafana.com)
-Dashboard	ID
-Node Exporter Full	1860
-Kube Prometheus Stack	6417
-Kubernetes Cluster Monitoring	315
+**Save & Test — should show Data source is working.**
 
-Steps:
-Click + → Import
+## 📊 Import Grafana Dashboards
 
-Enter Dashboard ID (e.g., 1860)
+### Recommended Dashboard IDs (from Grafana.com)
+**Dashboard	ID**
+- Node Exporter Full	`1860`
+- Kube Prometheus Stack	`6417`
+- Kubernetes Cluster Monitoring	`315`
+![Screenshot 2025-05-26 122253](https://github.com/user-attachments/assets/056c1c1a-5e9f-4915-83a2-b2d40cc2f157)
+![Screenshot 2025-05-26 122400](https://github.com/user-attachments/assets/bd3e1e59-9c06-4c3b-8866-6aeb1f8840b7)
+![Screenshot 2025-05-26 122504](https://github.com/user-attachments/assets/5e475287-aed4-4c0a-8641-bbaf22b2d263)
+![Screenshot 2025-05-26 122700](https://github.com/user-attachments/assets/59b0ad87-e6f2-46d4-8403-9f8f433beb54)
+![Screenshot 2025-05-26 123223](https://github.com/user-attachments/assets/bf539ca9-6bfe-4598-9980-c0e92a195d95)
+**Steps:**
 
-Select Prometheus as data source
+1. Click + → Import
 
-Click Import
+2. Enter Dashboard ID (e.g., 1860)
+3. Select Prometheus as data source
 
-🧰 Troubleshooting Summary
-Issue	Resolution
-curl to NodePort failed	Used kubectl port-forward instead
-Port 3000 already in use	Switched to 3001
-ss not found inside Grafana	Used netstat instead
-Prometheus API: no such host	Used correct internal service name: prometheus-server.monitoring.svc.cluster.local
-Grafana not reachable	Created local SSH tunnel with port forwarding
+4. Click Import
 
-🎉 What We Achieved
-✅ Installed full monitoring stack with kube-prometheus-stack
+## 🧰 Troubleshooting Summary
 
-✅ Set up Grafana with port forwarding and remote SSH tunnel
+**1. curl to NodePort failed	Used kubectl port-forward instead**
+- Port `3000` already in use	Switched to `3001`
 
-✅ Connected Prometheus as a data source
+**2. Prometheus API: no such host**
+- Used correct internal service name: prometheus-server.monitoring.svc.cluster.local
 
-✅ Imported and viewed real-time dashboards
+  
+**3. Grafana not reachable**
+- Created local SSH tunnel with port forwarding
 
-✅ Troubleshot service access issues and verified successful connections
+## 🎉 What We Achieved from moitoring using Prometheus and Grafana
 
-📂 Directory/Chart Details
-If you want to customize the chart:
+- ✅ Installed full monitoring stack with kube-prometheus-stack
+- ✅ Set up Grafana with port forwarding and remote SSH tunnel
+- ✅ Connected Prometheus as a data source
+- ✅ Imported and viewed real-time dashboards
+- ✅ Troubleshot service access issues and verified successful connections
 
-bash
-Copy
-Edit
+## 📂 Directory/Chart Details
+
+1. If we want to customize the chart:
+
+```bash
 helm show values prometheus-community/kube-prometheus-stack > custom-values.yaml
-Then install using:
+```
 
-bash
-Copy
-Edit
+2. Then install using:
+
+```bash
 helm upgrade --install prometheus -f custom-values.yaml prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
-📌 Useful Commands
-bash
-Copy
-Edit
-# Get all services
-kubectl get svc -n monitoring
+```
 
-# Get Grafana password
+📌 Useful Commands
+
+**1. Get all services**
+```bash
+kubectl get svc -n monitoring
+```
+**2. Get Grafana password**
 kubectl get secret -n monitoring prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 --decode
 
-# Port forward Grafana
+**3. Port forward Grafana**
 kubectl port-forward -n monitoring svc/grafana 3001:80
 
-# SSH tunnel from your laptop
+**4. SSH tunnel from your laptop**
 ssh -i "key.pem" -L 3001:127.0.0.1:3001 ubuntu@<your-ec2-ip>
-🧠 Final Notes
-You now have a production-ready monitoring stack set up and working. From here, you can:
 
-Set up Grafana alerts
+## 🧠 Final Notes
 
-Integrate with Slack/Webhooks
-
-Export dashboards as code
-
-Monitor specific microservices via custom Prometheus exporters
+**we now have a production-ready monitoring stack set up and working. From here, you can:**
+- Set up Grafana alerts
+- Integrate with Slack/Webhooks
+- Export dashboards as code
+- Monitor specific microservices via custom Prometheus exporters
