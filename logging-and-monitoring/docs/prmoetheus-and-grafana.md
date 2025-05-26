@@ -186,11 +186,3 @@ kubectl port-forward -n monitoring svc/grafana 3001:80
 ```bash
 ssh -i "key.pem" -L 3001:127.0.0.1:3001 ubuntu@<your-ec2-ip>
 ```
-
-## 🧠 Final Notes
-
-**we now have a production-ready monitoring stack set up and working. From here, you can:**
-- Set up Grafana alerts
-- Integrate with Slack/Webhooks
-- Export dashboards as code
-- Monitor specific microservices via custom Prometheus exporters
