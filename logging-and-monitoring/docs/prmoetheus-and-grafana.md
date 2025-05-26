@@ -1,6 +1,6 @@
 # 📊 Kubernetes Monitoring Stack Setup (Prometheus + Grafana)
 
-This document provides a complete walkthrough for deploying and configuring a **monitoring stack** using **Prometheus** and **Grafana** on a Kubernetes cluster. It includes installation, configurations, access setup, troubleshooting steps, and dashboard integration in Grafana.
+**This document provides a complete walkthrough for deploying and configuring a **monitoring stack** using **Prometheus** and **Grafana** on a Kubernetes cluster. It includes installation, configurations, access setup, troubleshooting steps, and dashboard integration in Grafana.**
 
 ---
 
@@ -33,7 +33,8 @@ helm repo update
 helm install prometheus prometheus-community/kube-prometheus-stack \
   --namespace monitoring --create-namespace
 ```
-** This installs:**
+
+**This installs:**
 - `Prometheus server`
 - `Grafana`
 - `Node exporter`
