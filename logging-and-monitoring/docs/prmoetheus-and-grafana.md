@@ -5,7 +5,6 @@
 ---
 
 ## Overview
-
 We installed the **Kube-Prometheus-Stack** (a Helm chart that bundles Prometheus, Grafana, Alertmanager, and exporters) and verified end-to-end monitoring of the Kubernetes cluster using **Grafana dashboards**.
 
 ---
@@ -32,6 +31,18 @@ helm repo update
 ```bash
 helm install prometheus prometheus-community/kube-prometheus-stack \
   --namespace monitoring --create-namespace
+```
+### 1. Add Grafana Helm Repository
+```bash
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+```
+
+### 2. Install Grafana
+```bash
+helm install grafana grafana/grafana \
+  --namespace monitoring \
+  --create-namespace
 ```
 
 **This installs:**
