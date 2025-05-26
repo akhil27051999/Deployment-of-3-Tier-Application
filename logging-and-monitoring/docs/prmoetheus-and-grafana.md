@@ -3,12 +3,10 @@
 **This document provides a complete walkthrough for deploying and configuring a **monitoring stack** using **Prometheus** and **Grafana** on a Kubernetes cluster. It includes installation, configurations, access setup, troubleshooting steps, and dashboard integration in Grafana.**
 
 ---
-
 ## Overview
 We installed the **Kube-Prometheus-Stack** (a Helm chart that bundles Prometheus, Grafana, Alertmanager, and exporters) and verified end-to-end monitoring of the Kubernetes cluster using **Grafana dashboards**.
 
 ---
-
 ## 🛠️ Prerequisites
 
 - A running Kubernetes cluster (e.g., AWS EKS or Kubeadm setup)
@@ -17,7 +15,6 @@ We installed the **Kube-Prometheus-Stack** (a Helm chart that bundles Prometheus
 - EC2 SSH access for port forwarding
 
 ---
-
 ## 🚀 Installation Steps
 
 ### 1. Add Prometheus Community Helm Repo
@@ -69,6 +66,7 @@ kubectl get svc -n monitoring
 kubectl get pods -n monitoring
 ```
 **All pods (Prometheus, Grafana, exporters) should be in Running state.**
+
 ---
 ## 🌐 Access Grafana Dashboard
 
@@ -98,6 +96,7 @@ ssh -i "your-key.pem" -L 3001:127.0.0.1:3001 ubuntu@<EC2_Public_IP>
 kubectl get secret --namespace monitoring prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
 
+---
 ## 📉 Add Prometheus Data Source to Grafana
 
 ### If not preconfigured:
@@ -110,8 +109,8 @@ URL:
 ```pgsql
 http://prometheus-server.monitoring.svc.cluster.local
 ```
-
 **Save & Test — should show Data source is working.**
+
 ---
 ## 📊 Import Grafana Dashboards
 
