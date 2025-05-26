@@ -66,7 +66,7 @@ devops-project/
 ```
 
 ## Project Section-wise Overview
-
+---
 ### Section 1: Provisioning AWS EC2 Virtual Machine and SSH Access
 
 - Created a Virtual Machine (VM) on AWS using the EC2 service.
@@ -121,6 +121,3 @@ devops-project/
 - Configured Prometheus exporters for application and infrastructure monitoring.
 - Set up Grafana dashboards for real-time visualization of application health and performance.
 - Implemented alerting rules for proactive incident management.
-
----
-
