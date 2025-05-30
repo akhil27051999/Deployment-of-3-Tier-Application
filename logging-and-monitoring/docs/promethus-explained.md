@@ -37,8 +37,8 @@ This means: discover all Kubernetes nodes, and scrape their Node Exporter metric
 **6. For your microservices, you can expose a /metrics HTTP endpoint (usually using client libraries like Prometheus client for Go, Python, Java, Node.js). Prometheus scrapes these endpoints based on the service discovery rules and scrape configs.**
 
 ### Summary
-Aspect	Description
-1. What Prometheus scrapes:	Metrics exposed on /metrics endpoints (not logs)
-2.  it discovers targets:	Kubernetes service discovery (pods, services, nodes)
-3. Components exposing metrics:	Kubelet, API server, Node Exporter, kube-state-metrics, etc.
-4. Logs?	Prometheus does not scrape logs; use logging tools (e.g., Loki)
+
+**1. What Prometheus scrapes:**	Metrics exposed on /metrics endpoints (not logs)
+**2.  it discovers targets:**	Kubernetes service discovery (pods, services, nodes)
+**3. Components exposing metrics:**	Kubelet, API server, Node Exporter, kube-state-metrics, etc.
+**4. Logs?**	Prometheus does not scrape logs; use logging tools (e.g., Loki)
