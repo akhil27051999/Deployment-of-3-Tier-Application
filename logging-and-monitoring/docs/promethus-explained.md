@@ -32,6 +32,7 @@ The Prometheus config might have a scrape job like this:
       regex: '(.*):10250'
       replacement: '${1}:9100'
       target_label: __address__
+```
 
 This means: discover all Kubernetes nodes, and scrape their Node Exporter metrics on port 9100.
 	
