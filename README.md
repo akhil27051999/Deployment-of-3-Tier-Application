@@ -1,4 +1,4 @@
-# PROJECT : End-to-End DevOps Deployment for 3-Tier Application from Development to Production
+# End-to-End DevOps Deployment for 3-Tier Application from Development to Production
 
 ## Project Summary
 
