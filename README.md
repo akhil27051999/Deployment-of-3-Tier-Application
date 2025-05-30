@@ -3,6 +3,7 @@
 ## Project Summary
 
 This project demonstrates a complete DevOps lifecycle for a simple 3-tier microservices application — consisting of a frontend, backend, and PostgreSQL database — deployed from development to production using modern DevOps tools and best practices.
+
 ![image](https://github.com/user-attachments/assets/72fe0978-df5c-48a8-bc19-b8c153174eb3)
 
 
