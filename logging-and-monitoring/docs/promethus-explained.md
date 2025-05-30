@@ -23,6 +23,7 @@
 **5. Example:**
 The Prometheus config might have a scrape job like this:
 
+```yaml
 - job_name: 'kubernetes-nodes'
   kubernetes_sd_configs:
     - role: node
