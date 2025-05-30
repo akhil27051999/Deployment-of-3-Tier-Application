@@ -79,7 +79,7 @@ kubectl port-forward -n monitoring svc/grafana 3001:80
 On your local machine:
 
 ```bash
-ssh -i "your-key.pem" -L 3001:127.0.0.1:3001 ubuntu@<EC2_Public_IP>
+ssh -i "your-key.pem" -L 3001:localhost:3001 ubuntu@<EC2_Public_IP>
 ```
 
 ### 3. Open Grafana in Browser
