@@ -48,7 +48,6 @@ This means: discover all Kubernetes nodes, and scrape their Node Exporter metric
 ![Screenshot 2025-05-23 234730](https://github.com/user-attachments/assets/db14a8ba-3957-4b5c-b145-d7c95c568535)
 ![Screenshot 2025-05-24 000422](https://github.com/user-attachments/assets/8e9af681-a73c-4a3b-8944-2a7644280795)
 ![Screenshot 2025-05-23 233249](https://github.com/user-attachments/assets/fe8e0648-dc25-4e33-b168-e4f2221d3bb9)
-![Screenshot 2025-05-24 000422](https://github.com/user-attachments/assets/ddf4e5d1-fb24-4529-a002-7c38234c66b2)
 ![Screenshot 2025-05-23 233339](https://github.com/user-attachments/assets/efc99b91-3182-4059-be6a-7fd313e0d9bb)
 
 
