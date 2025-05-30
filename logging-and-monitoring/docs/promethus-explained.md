@@ -39,6 +39,9 @@ This means: discover all Kubernetes nodes, and scrape their Node Exporter metric
 ### Summary
 
 **1. What Prometheus scrapes:**	Metrics exposed on /metrics endpoints (not logs)
+
 **2.  it discovers targets:**	Kubernetes service discovery (pods, services, nodes)
+
 **3. Components exposing metrics:**	Kubelet, API server, Node Exporter, kube-state-metrics, etc.
+
 **4. Logs?**	Prometheus does not scrape logs; use logging tools (e.g., Loki)
