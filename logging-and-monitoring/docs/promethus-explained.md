@@ -1,7 +1,9 @@
 ## How Prometheus Scrapes Metrics from Kubernetes
 
 **1. Prometheus scrapes metrics endpoints exposed by Kubernetes components and workloads.**
+
 **2. These endpoints are usually HTTP /metrics endpoints that expose metrics in a Prometheus format.**
+
 **3. Kubernetes Components that expose metrics:**
 
 - Kubelet
