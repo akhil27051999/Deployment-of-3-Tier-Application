@@ -29,6 +29,8 @@
      - **HTTP** (optional for frontend app): TCP, port 80, source: anywhere
      - **Custom TCP** (optional for backend ports)
 8. Review and **Launch**.
+   
+![Screenshot 2025-05-27 003802](https://github.com/user-attachments/assets/19d67475-222a-4c3c-b915-a068084050ba)
 
 ---
 
