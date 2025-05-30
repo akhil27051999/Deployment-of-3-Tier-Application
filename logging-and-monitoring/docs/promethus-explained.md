@@ -3,21 +3,22 @@
 **1. Prometheus scrapes metrics endpoints exposed by Kubernetes components and workloads.**
 **2. These endpoints are usually HTTP /metrics endpoints that expose metrics in a Prometheus format.**
 **3. Kubernetes Components that expose metrics:**
-		• Kubelet
-		• API Server
-		• Controller Manager
-		• Scheduler
-		• Node Exporter (for node-level metrics)
-		• cAdvisor (container metrics)
-		• kube-state-metrics (state metrics about Kubernetes objects)
+
+- Kubelet
+- API Server
+- Controller Manager
+- Scheduler
+- Node Exporter (for node-level metrics)
+- cAdvisor (container metrics)
+- kube-state-metrics (state metrics about Kubernetes objects)
 		
 **4. How does Prometheus discover these endpoints?**
-		• Prometheus uses service discovery mechanisms configured in its prometheus.yml or via the Helm chart defaults.
-		• For Kubernetes, this typically includes discovering:
-			• Services with specific labels/annotations
-			• Pods with specific labels/annotations
-			• Endpoints
-			• Nodes
+- Prometheus uses service discovery mechanisms configured in its prometheus.yml or via the Helm chart defaults.
+- For Kubernetes, this typically includes discovering:
+  - Services with specific labels/annotations
+  - Pods with specific labels/annotations
+  - Endpoints
+  - Nodes
 			
 **5. Example:**
 The Prometheus config might have a scrape job like this:
