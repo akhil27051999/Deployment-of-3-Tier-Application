@@ -9,9 +9,7 @@
 2. Sets up Docker Buildx
 3. Authenticates to Docker Hub
 
----
-
-### Builds & pushes Docker images for:
+**Builds & pushes Docker images for:**
 
 - `backend` → `akhilthyadi/my-backend:latest`
 - `frontend` → `akhilthyadi/my-frontend:latest`
