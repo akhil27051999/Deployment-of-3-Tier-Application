@@ -33,7 +33,8 @@ sudo apt install git -y
 ---
 
 **✅ Step 2: Configure Git (once per machine)**
-After installation, set our Git username and email. This is important for tracking commits.
+
+- After installation, set our Git username and email. This is important for tracking commits.
 
 ```bash
 git config --global user.name "our Name"
@@ -43,7 +44,8 @@ git config --global user.email "our.email@example.com"
 ---
 
 **✅ Step 3: Clone the repository**
-we will use the git clone command with the repo URL to get the code.
+
+- we will use the git clone command with the repo URL to get the code.
 
 For example:
 
@@ -55,6 +57,7 @@ This will create a folder named `Deployment-of-3-Tier-Application` in our curren
 ---
 
 **✅ Step 4: Check the project structure**
+
 - Navigate into the cloned directory:
 
 ```bash
@@ -88,7 +91,7 @@ Each folder represents one microservice.
 
 **✅ Step 6: Basic Git operations**
 
-Some basic commands you’ll use often:
+- Some basic commands you’ll use often:
 
 **1. Check status:**
 
