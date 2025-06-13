@@ -86,7 +86,7 @@ Each folder represents one microservice.
 
 ---
 
-**Step 6: Basic Git operations**
+**✅ Step 6: Basic Git operations**
 
 Some basic commands you’ll use often:
 
