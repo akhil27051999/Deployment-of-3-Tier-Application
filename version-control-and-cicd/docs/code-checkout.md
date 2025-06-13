@@ -30,6 +30,8 @@ sudo apt update
 sudo apt install git -y
 ```
 
+---
+
 **Step 2: Configure Git (once per machine)**
 After installation, set our Git username and email. This is important for tracking commits.
 
@@ -37,6 +39,8 @@ After installation, set our Git username and email. This is important for tracki
 git config --global user.name "our Name"
 git config --global user.email "our.email@example.com"
 ```
+
+---
 
 **Step 3: Clone the repository**
 we will use the git clone command with the repo URL to get the code.
@@ -47,6 +51,8 @@ For example:
 git clone https://github.com/ourusername/our-microservices-project.git
 ```
 This will create a folder named `Deployment-of-3-Tier-Application` in our current directory with all the code.
+
+---
 
 **Step 4: Check the project structure**
 - Navigate into the cloned directory:
@@ -70,11 +76,15 @@ ls -l
 
 Each folder represents one microservice.
 
+---
+
 **Step 5: Understanding the code base (basic check)**
 
 1. frontend/ - Contains code related to the frontend UI (usually React, Angular, Vue, or simple HTML/JS).
 2. backend/ - Contains API code (Node.js, Python, Java, etc.).
 3. db/ - Contains database-related scripts (e.g., SQL scripts, DB config).
+
+---
 
 **Step 6: Basic Git operations**
 
