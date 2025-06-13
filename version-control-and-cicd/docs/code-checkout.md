@@ -19,9 +19,9 @@
 3. Access to a terminal or command prompt on your machine or VM.
    
 
-## ✅ Steps to Install and provisioning Git
+## Steps to Install and provisioning Git
 
-**Step 1: Set up Git on our machine/VM**
+**✅ Step 1: Set up Git on our machine/VM**
 
 If Git is not installed, install it first.
 - On Ubuntu/Linux VM:
@@ -32,7 +32,7 @@ sudo apt install git -y
 
 ---
 
-**Step 2: Configure Git (once per machine)**
+**✅ Step 2: Configure Git (once per machine)**
 After installation, set our Git username and email. This is important for tracking commits.
 
 ```bash
@@ -42,7 +42,7 @@ git config --global user.email "our.email@example.com"
 
 ---
 
-**Step 3: Clone the repository**
+**✅ Step 3: Clone the repository**
 we will use the git clone command with the repo URL to get the code.
 
 For example:
@@ -54,7 +54,7 @@ This will create a folder named `Deployment-of-3-Tier-Application` in our curren
 
 ---
 
-**Step 4: Check the project structure**
+**✅ Step 4: Check the project structure**
 - Navigate into the cloned directory:
 
 ```bash
@@ -78,7 +78,7 @@ Each folder represents one microservice.
 
 ---
 
-**Step 5: Understanding the code base (basic check)**
+**✅ Step 5: Understanding the code base (basic check)**
 
 1. frontend/ - Contains code related to the frontend UI (usually React, Angular, Vue, or simple HTML/JS).
 2. backend/ - Contains API code (Node.js, Python, Java, etc.).
