@@ -45,7 +45,7 @@ git config --global user.email "our.email@example.com"
 
 **✅ Step 3: Clone the repository**
 
-- we will use the git clone command with the repo URL to get the code.
+we will use the git clone command with the repo URL to get the code.
 
 ```bash
 git clone https://github.com/ourusername/our-microservices-project.git
@@ -56,13 +56,13 @@ This will create a folder named `Deployment-of-3-Tier-Application` in our curren
 
 **✅ Step 4: Check the project structure**
 
-- Navigate into the cloned directory:
+Navigate into the cloned directory:
 
 ```bash
 cd Deployment-of-3-Tier-Application
 ```
 
-- List files and folders:
+List files and folders:
 
 ```bash
 ls -l
