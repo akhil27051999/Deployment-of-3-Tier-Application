@@ -17,39 +17,39 @@ We installed the **Kube-Prometheus-Stack** (a Helm chart that bundles Prometheus
 ---
 ## 🚀 Installation Steps
 
-### 1. Add Prometheus Community Helm Repo
+**1. Add Prometheus Community Helm Repo**
 
 ```bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 ```
-### 2. Install Kube Prometheus Stack
+**2. Install Kube Prometheus Stack**
 
 ```bash
 helm install prometheus prometheus-community/kube-prometheus-stack \
   --namespace monitoring --create-namespace
 ```
-### 3. Add Grafana Helm Repository
+**3. Add Grafana Helm Repository**
 ```bash
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 ```
 
-### 4. Install Grafana
+**4. Install Grafana**
 ```bash
 helm install grafana grafana/grafana \
   --namespace monitoring \
   --create-namespace
 ```
 
-**This installs:**
+*This installs:*
 - `Prometheus server`
 - `Grafana`
 - `Node exporter`
 - `kube-state-metrics`
 - `Alertmanager`
 
-### 🔍 Verify Installation
+## 🔍 Verify Installation
 
 **1. List Services**
 ```bash
