@@ -2,8 +2,6 @@
 
 **This section guides us through creating a Virtual Machine (EC2 instance) on AWS and connecting to it securely via SSH.**
 
----
-
 ### Step 1: Sign in to AWS Management Console
 
 1. Open [AWS Console](https://aws.amazon.com/console/).
