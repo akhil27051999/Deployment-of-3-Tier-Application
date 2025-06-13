@@ -19,7 +19,7 @@
 3. Access to a terminal or command prompt on your machine or VM.
    
 
-## Steps to Install and provisioning Git
+## ✅ Steps to Install and provisioning Git
 
 **Step 1: Set up Git on our machine/VM**
 
