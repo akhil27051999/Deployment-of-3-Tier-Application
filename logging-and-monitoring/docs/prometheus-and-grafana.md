@@ -70,24 +70,24 @@ kubectl get pods -n monitoring
 
 ## 🌐 Access Grafana Dashboard
 
-### 1. Port Forward Grafana
+**1. Port Forward Grafana**
 ```bash
 kubectl port-forward -n monitoring svc/grafana 3001:80
 ```
 
-### 2. SSH Tunnel from Local
+**2. SSH Tunnel from Local**
 On your local machine:
 
 ```bash
 ssh -i "your-key.pem" -L 3001:localhost:3001 ubuntu@<EC2_Public_IP>
 ```
 
-### 3. Open Grafana in Browser
+**3. Open Grafana in Browser**
 
 **Navigate to:**
 'http://localhost:3001'
 
-### 4. Default Credentials
+**4. Default Credentials**
 
 - Username: `admin`
 - Password: `prom-operator` (or fetch using below)
@@ -99,7 +99,7 @@ kubectl get secret --namespace monitoring prometheus-grafana -o jsonpath="{.data
 
 ## 📉 Add Prometheus Data Source to Grafana
 
-### If not preconfigured:
+**If not preconfigured:**
 
 **Navigate to Settings → Data Sources**
 `Add Prometheus`
@@ -115,6 +115,7 @@ http://prometheus-server.monitoring.svc.cluster.local
 ## 📊 Import Grafana Dashboards
 
 ### Recommended Dashboard IDs (from Grafana.com)
+
 **Dashboard	ID**
 - Node Exporter Full	`1860`
 - Kube Prometheus Stack	`6417`
