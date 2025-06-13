@@ -13,10 +13,11 @@
 
 ---
 
-## What We Need Before Starting
+### What We Need Before Starting
 1. Docker images pushed to a container registry (Docker Hub or AWS ECR).
 2. Kubernetes cluster (we will set it up on your AWS VM or use a managed Kubernetes service).
 3. kubectl CLI tool installed to interact with Kubernetes cluster
+
 
 ## 🛠️ Installing Kubernetes CLI Tools
 
