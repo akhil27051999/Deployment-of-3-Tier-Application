@@ -62,7 +62,6 @@ This confirmed the backend could resolve service names to internal IPs correctly
 ![Screenshot 2025-05-25 011647](https://github.com/user-attachments/assets/fff2ad3c-ce9d-4c8b-a397-674be1099f9f)
 ![Screenshot 2025-05-25 011938](https://github.com/user-attachments/assets/2c9be808-dad8-4c53-b38d-d96c0a3de689)
 
----
 
 ## 📌 Conclusion: 
 - Service discovery in Kubernetes enables microservices to communicate using predictable DNS names and service abstractions, removing the need for hardcoded IPs. 
