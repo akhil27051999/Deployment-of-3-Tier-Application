@@ -1,18 +1,18 @@
-#  Kubernetes Troubleshooting Guide
+# Kubernetes Troubleshooting Guide
 
 **This section covers real-world issues encountered during deployment and how they were resolved.**
 
-## ❌ Issue: ImagePullBackOff / ErrImagePull
+### ❌ Issue: ImagePullBackOff / ErrImagePull
 
-### Cause:
+**Cause:**
 The container image couldn't be pulled from the registry.
 
-### Common Reasons:
+**Common Reasons:**
 1. Incorrect image name or tag.
 2. Private image without authentication.
 3. Image not pushed to Docker Hub or registry.
 
-### Resolution:
+**Resolution:**
 
 **1. Verify image name and tag in the deployment YAML:**
 
@@ -49,18 +49,19 @@ imagePullSecrets:
 ```
 
 ---
-## ❌ Issue: CrashLoopBackOff
 
-### Cause:
+### ❌ Issue: CrashLoopBackOff
+
+**Cause:**
 The container keeps crashing after starting.
 
-### Common Reasons:
+**Common Reasons:**
 
 1. Misconfigured environment variables.
 2. Application error (e.g., DB connection failed).
 3. Required service not ready yet (e.g., backend starting before DB).
 
-### Resolution:
+**Resolution:**
 
 **1. Check pod logs to inspect errors:**
 
@@ -80,12 +81,12 @@ kubectl get svc
 
 ---
 
-## 🔍 Issue: Microservices Not Communicating
+### 🔍 Issue: Microservices Not Communicating
 
-### Symptom:
+**Symptom:**
 Services can’t talk to each other (e.g., backend can’t reach DB or frontend can’t reach backend).
 
-### Troubleshooting Steps:
+**Troubleshooting Steps:**
 
 **1. Verify Services Are Running:**
 
@@ -125,6 +126,7 @@ Use Full Cluster DNS Names for Reliability:
 <service-name>.<namespace>.svc.cluster.local
 ```
 ---
+
 ## Summary of Fixes Applied in Our Project
 
 | **Problem**                  | **Diagnosis**                           | **Fix**                                                                 |
