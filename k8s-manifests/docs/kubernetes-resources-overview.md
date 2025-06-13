@@ -2,7 +2,6 @@
 
 **This project uses a 3-tier architecture: **Frontend**, **Backend**, and **PostgreSQL (Database)**, deployed on a local Kubernetes cluster via `kind`. Here's a breakdown of the key Kubernetes resources we used, their role, and why they were necessary.**
 
----
 
 ### 📦 1. Pod
 - **What it is:** The smallest unit in Kubernetes, encapsulates a container (or multiple tightly coupled containers).
