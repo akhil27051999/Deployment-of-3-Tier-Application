@@ -3,11 +3,11 @@
 **This document provides a complete walkthrough for deploying and configuring a **monitoring stack** using **Prometheus** and **Grafana** on a Kubernetes cluster. It includes installation, configurations, access setup, troubleshooting steps, and dashboard integration in Grafana.**
 
 ---
-## Overview
+### Overview
 We installed the **Kube-Prometheus-Stack** (a Helm chart that bundles Prometheus, Grafana, Alertmanager, and exporters) and verified end-to-end monitoring of the Kubernetes cluster using **Grafana dashboards**.
 
 ---
-## 🛠️ Prerequisites
+### 🛠️ Prerequisites
 
 - A running Kubernetes cluster (e.g., AWS EKS or Kubeadm setup)
 - Helm 3 installed
