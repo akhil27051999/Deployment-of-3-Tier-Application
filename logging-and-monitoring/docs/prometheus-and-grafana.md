@@ -132,7 +132,7 @@ http://prometheus-server.monitoring.svc.cluster.local
 ![Screenshot 2025-05-26 123223](https://github.com/user-attachments/assets/bf539ca9-6bfe-4598-9980-c0e92a195d95)
 
 
-## 🧰 Troubleshooting Summary
+## 🧰 Troubleshooting
 
 **1. curl to NodePort failed	Used kubectl port-forward instead**
 - Port `3000` already in use	Switched to `3001`
