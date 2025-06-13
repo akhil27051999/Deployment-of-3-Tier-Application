@@ -23,8 +23,8 @@
 
 **✅ Step 1: Set up Git on our machine/VM**
 
-If Git is not installed, install it first.
-- On Ubuntu/Linux VM:
+If Git is not installed, install it first. On Ubuntu/Linux VM:
+
 ```bash
 sudo apt update
 sudo apt install git -y
@@ -34,7 +34,7 @@ sudo apt install git -y
 
 **✅ Step 2: Configure Git (once per machine)**
 
-- After installation, set our Git username and email. This is important for tracking commits.
+After installation, set our Git username and email. This is important for tracking commits.
 
 ```bash
 git config --global user.name "our Name"
@@ -46,8 +46,6 @@ git config --global user.email "our.email@example.com"
 **✅ Step 3: Clone the repository**
 
 - we will use the git clone command with the repo URL to get the code.
-
-For example:
 
 ```bash
 git clone https://github.com/ourusername/our-microservices-project.git
