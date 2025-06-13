@@ -49,6 +49,7 @@ docker push akhilthyadi/frontend:v1
 docker push akhilthyadi/backend:v1
 docker push akhilthyadi/postgres:v1
 ```
+---
 
 ### 🔁 Image Usage in Kubernetes
 In each Deployment YAML file, we referenced the images like this:
@@ -59,6 +60,8 @@ containers:
     image: akhilthyadi/backend:v1
 ```
 This ensures Kubernetes pulls the images directly from Docker Hub during pod creation.
+
+---
 
 ### Output:
 
