@@ -12,7 +12,7 @@ The container image couldn't be pulled from the registry.
 2. Private image without authentication.
 3. Image not pushed to Docker Hub or registry.
 
-**Resolution:**
+**Troubleshooting Steps:**
 
 **1. Verify image name and tag in the deployment YAML:**
 
@@ -61,7 +61,7 @@ The container keeps crashing after starting.
 2. Application error (e.g., DB connection failed).
 3. Required service not ready yet (e.g., backend starting before DB).
 
-**Resolution:**
+**Troubleshooting Steps:**
 
 **1. Check pod logs to inspect errors:**
 
