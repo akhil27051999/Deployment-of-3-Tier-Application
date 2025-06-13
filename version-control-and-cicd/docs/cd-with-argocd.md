@@ -4,7 +4,7 @@
 
 ---
 
-## Repo Structure
+### Repo Structure
 
 - `k8s-manifests/apps/frontend` - Kubernetes manifests for Frontend (deployment + service)
 - `k8s-manifests/apps/backend` - Kubernetes manifests for Backend (deployment + service)
@@ -12,7 +12,7 @@
 
 ---
 
-## Argo CD Applications Setup
+### Argo CD Applications Setup
 
 We create **three Argo CD Applications** for each component, pointing to their respective paths in the repository:
 
@@ -26,7 +26,7 @@ We create **three Argo CD Applications** for each component, pointing to their r
 
 ---
 
-## Sync & Deployment
+### Sync & Deployment
 
 - Each application syncs manifests from the GitHub repo at `HEAD`.
 - Sync Policy can be manual initially and switched to automatic after validation.
@@ -57,6 +57,7 @@ kubectl port-forward svc/frontend 8080:80 -n default
 **4. Then access: `http://localhost:8080`**
 
 ---
+
 ## Outputs:
 ![Screenshot 2025-05-25 201337](https://github.com/user-attachments/assets/07abb512-9aec-4566-86f2-dbb54e6aad5c)
 
@@ -65,6 +66,7 @@ kubectl port-forward svc/frontend 8080:80 -n default
 ![Screenshot 2025-05-25 202714](https://github.com/user-attachments/assets/198dc179-59ca-463c-8b9f-6a26c0892b7b)
 
 ---
+
 ## Troubleshooting Steps
 
 ### 1. Application OutOfSync or SyncFailed
@@ -77,6 +79,8 @@ argocd app get <app-name>
 - Common cause: Kubernetes namespace missing or incorrect in manifests or Argo CD app spec.
 - Fix: Ensure namespaces exist before syncing or update Argo CD app destination namespace.
 
+---
+
 ### 2. Missing Namespace Error
 
 **If error shows something like namespaces "frontend" not found, create namespace manually:**
@@ -85,6 +89,8 @@ argocd app get <app-name>
 kubectl create namespace frontend
 ```
 - Or change Argo CD application to deploy to existing namespace (default).
+
+---
 
 ### 3. Resources Not Created (No Pods or Services)
 
@@ -102,6 +108,7 @@ kubectl get events -n <namespace>
 kubectl describe deployment <deployment-name> -n <namespace>
 ```
 
+---
 
 ### 4. Pods Not Running or CrashLoopBackOff
 
@@ -115,6 +122,9 @@ kubectl describe pod <pod-name> -n <namespace>
 ```bash
 kubectl logs <pod-name> -n <namespace>
 ```
+
+---
+
 ### 5. Service Not Found or No Endpoints
 
 **I. Confirm services exist:**
@@ -129,6 +139,8 @@ kubectl get svc -n <namespace>
 kubectl describe svc <service-name> -n <namespace>
 ```
 - Make sure deployment labels match service selector labels.
+
+---
 
 ### Key Notes
 - Make sure Argo CD has access to your GitHub repo URL and correct revision.
