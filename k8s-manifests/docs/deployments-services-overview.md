@@ -3,7 +3,7 @@
 ### Overview
 **A Kubernetes Deployment is a resource that manages the lifecycle of pods and replica sets for your applications. It helps you declaratively update, scale, and maintain your app with high availability.**
 
-### Why Use Deployments?
+**Why Use Deployments?**
 1. Ensure our app runs the desired number of replicas.
 2. Enable rolling updates for zero downtime deployments.
 3. Automatically replace failed pods (self-healing).
