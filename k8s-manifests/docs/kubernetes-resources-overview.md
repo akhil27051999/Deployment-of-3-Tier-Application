@@ -31,19 +31,19 @@
 
 ---
 
-### 📦 4. ConfigMap (Optional)
+### 📦 4. ConfigMap
 - **What it is:** Used to inject configuration data into pods.
 - **Use Case (if needed):** Could be used to manage database connection strings or frontend environment variables.
 
 ---
 
-### 🔒 5. Secret (Optional)
+### 🔒 5. Secret 
 - **What it is:** Stores sensitive data like DB passwords.
 - **Use Case (recommended for production):** Store `POSTGRES_PASSWORD` instead of hardcoding it in YAML.
 
 ---
 
-### 📋 6. PersistentVolumeClaim (Optional/Advanced)
+### 📋 6. PersistentVolumeClaim
 - **What it is:** Allows pods to request persistent storage.
 - **Use Case:** For production-grade PostgreSQL, a PVC would ensure database data is not lost if the pod restarts.
 
@@ -55,11 +55,10 @@
 
 ---
 
-### 📡 8. Ingress (Not used here but useful in real-world)
+### 📡 8. Ingress
 - **What it is:** Manages external HTTP/S access to services.
 - **Use Case (Future):** Instead of NodePort, you can use Ingress with a domain name and TLS.
 
----
 
 ## 📖 Summary Table
 
