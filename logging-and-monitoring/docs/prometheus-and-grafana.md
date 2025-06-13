@@ -158,13 +158,13 @@ http://prometheus-server.monitoring.svc.cluster.local
 
 ### 📂 Directory/Chart Details
 
-1. If we want to customize the chart:
+**1. If we want to customize the chart:**
 
 ```bash
 helm show values prometheus-community/kube-prometheus-stack > custom-values.yaml
 ```
 
-2. Then install using:
+**2. Then install using:**
 
 ```bash
 helm upgrade --install prometheus -f custom-values.yaml prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
