@@ -29,6 +29,7 @@ Before running this pipeline, store your Docker credentials in the GitHub reposi
 `Repository Settings → Secrets → Actions → New repository secret`
 
 **Successful Build**
+
 Once the pipeline is triggered, it builds and pushes the images. You’ll see logs like:
 
 ```bash
