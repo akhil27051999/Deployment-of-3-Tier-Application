@@ -1,13 +1,13 @@
 # End-to-End DevOps Deployment for 3-Tier Application from Development to Production
 
-## 👨‍💻 Project Goal
+### 👨‍💻 Project Goal
 
 This project demonstrates a complete DevOps lifecycle for a simple 3-tier microservices application — consisting of a frontend, backend, and PostgreSQL database — deployed from development to production using modern DevOps tools and best practices.
 
 ![image](https://github.com/user-attachments/assets/2187559e-298e-43d2-9ea9-ee6234de2a40)
 
 
-## 🛠️ DevOps Tools Stack
+### 🛠️ DevOps Tools Stack
 
 | **Function**          | **Tool(s)**                     |
 |-----------------------|--------------------------------|
@@ -18,7 +18,7 @@ This project demonstrates a complete DevOps lifecycle for a simple 3-tier micros
 | **CI/CD Tools**       | GitHub Actions (CI), GitLab + ArgoCD (CD with GitOps) |
 | **Monitoring**        | Prometheus + Grafana       |
 
-## 📂 Directory Overview
+### 📂 Directory Overview
 
 | Directory / File         | Description                                  |
 |-------------------------|----------------------------------------------|
@@ -30,7 +30,7 @@ This project demonstrates a complete DevOps lifecycle for a simple 3-tier micros
 | `README.md`             | Project documentation and instructions            |
 
 
-## 📁 Project Structure
+### 📁 Project Structure
 
 ```text
 devops-project/
@@ -68,7 +68,7 @@ devops-project/
 
 ```
 
-## 🧱 Project Section-wise Overview
+## 🧩 Project Section-wise Overview
 
 ### ✅ Section 1: Provisioning AWS EC2 Virtual Machine and SSH Access
 
