@@ -64,11 +64,14 @@ kind version
 ```bash
 kind create cluster --name 3tier-cluster
 ```
-This creates:
+
+**This creates:**
 
 - A Kubernetes control plane node inside a Docker container.
 - Networking between services and pods.
 - we can now access the cluster using kubectl because kind automatically configures the context.
+
+---
 
 ### Verify the Cluster
 
