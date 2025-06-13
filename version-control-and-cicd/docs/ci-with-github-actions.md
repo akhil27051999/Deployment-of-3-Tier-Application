@@ -22,15 +22,14 @@
 Before running this pipeline, store your Docker credentials in the GitHub repository secrets:
 
 - **Secret Name	Description**
-1. `DOCKER_USERNAME`	Our Docker Hub username (e.g., akhilthyadi)
-2. `DOCKER_PASSWORD`	Docker Hub password or access token
+  1. `DOCKER_USERNAME`	Our Docker Hub username (e.g., akhilthyadi)
+  2. `DOCKER_PASSWORD`	Docker Hub password or access token
 
 - **we can add these in GitHub by going to:**
-`Repository Settings → Secrets → Actions → New repository secret`
+  - `Repository Settings → Secrets → Actions → New repository secret`
 
 - **Successful Build**
-
-Once the pipeline is triggered, it builds and pushes the images. You’ll see logs like:
+  - Once the pipeline is triggered, it builds and pushes the images. You’ll see logs like:
 
 ```bash
 Successfully tagged akhilthyadi/my-backend:latest
