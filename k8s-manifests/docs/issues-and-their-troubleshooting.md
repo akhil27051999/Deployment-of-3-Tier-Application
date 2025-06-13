@@ -1,4 +1,4 @@
-# Kubernetes Troubleshooting Guide
+# 🧰 Kubernetes Troubleshooting Guide
 
 **This section covers real-world issues encountered during deployment and how they were resolved.**
 
