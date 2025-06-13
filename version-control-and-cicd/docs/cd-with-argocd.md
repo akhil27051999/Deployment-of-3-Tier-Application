@@ -63,7 +63,7 @@ kubectl port-forward svc/frontend 8080:80 -n default
 
 
 
-## Troubleshooting Steps
+## 🧰 Troubleshooting Steps
 
 ### 1. Application OutOfSync or SyncFailed
 
