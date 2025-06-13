@@ -1,4 +1,4 @@
-## Kubernetes ☸️
+# Kubernetes ☸️
 - Kubernetes is an open-source platform to automate deploying, scaling, and managing containerized applications.
 - It manages our Docker containers across multiple hosts, ensuring our app is highly available and scalable.
 - Think of Kubernetes as the orchestrator that runs and manages our containers in production.
