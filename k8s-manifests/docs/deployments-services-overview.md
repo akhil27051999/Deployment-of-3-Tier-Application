@@ -78,7 +78,7 @@ kubectl rollout status deployment/<deployment-name>
 ```bash
 kubectl rollout undo deployment/<deployment-name>
 ```
----
+
 
 # 🌐 Kubernetes Services
 
