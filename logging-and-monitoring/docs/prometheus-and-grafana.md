@@ -114,9 +114,8 @@ http://prometheus-server.monitoring.svc.cluster.local
 
 ## 📊 Import Grafana Dashboards
 
-### Recommended Dashboard IDs (from Grafana.com)
+**Recommended Dashboard IDs (from Grafana.com)**
 
-**Dashboard	ID**
 - Node Exporter Full	`1860`
 - Kube Prometheus Stack	`6417`
 - Kubernetes Cluster Monitoring	`315`
