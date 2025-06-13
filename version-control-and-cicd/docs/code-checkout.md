@@ -13,7 +13,7 @@
 
 ---
 
-### what we need before Starting
+### What we need before Starting
 1. A GitHub/GitLab repository link (for your 3 microservices: frontend, backend, db).
 2. Git installed on your laptop or VM.
 3. Access to a terminal or command prompt on your machine or VM.
