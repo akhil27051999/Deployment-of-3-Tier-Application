@@ -64,7 +64,7 @@ spec:
 - Managed independent lifecycle and updates for each microservice.
 - Ensured high availability and scalability.
 
-## Troubleshooting
+## 🧰 Troubleshooting Deployment
 
 **1. Check deployment status:**
 ```bash
