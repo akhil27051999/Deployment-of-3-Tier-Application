@@ -148,11 +148,11 @@ http://prometheus-server.monitoring.svc.cluster.local
 
 ### 🎉 What We Achieved from moitoring using Prometheus and Grafana
 
-- ✅ Installed full monitoring stack with kube-prometheus-stack
-- ✅ Set up Grafana with port forwarding and remote SSH tunnel
-- ✅ Connected Prometheus as a data source
-- ✅ Imported and viewed real-time dashboards
-- ✅ Troubleshot service access issues and verified successful connections
+- Installed full monitoring stack with kube-prometheus-stack
+- Set up Grafana with port forwarding and remote SSH tunnel
+- Connected Prometheus as a data source
+- Imported and viewed real-time dashboards
+- Troubleshot service access issues and verified successful connections
 ---
 
 ### 📂 Directory/Chart Details
