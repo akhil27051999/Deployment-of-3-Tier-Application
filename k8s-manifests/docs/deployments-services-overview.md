@@ -3,14 +3,14 @@
 ### Overview
 **A Kubernetes Deployment is a resource that manages the lifecycle of pods and replica sets for your applications. It helps you declaratively update, scale, and maintain your app with high availability.**
 
-## Why Use Deployments?
+### Why Use Deployments?
 1. Ensure our app runs the desired number of replicas.
 2. Enable rolling updates for zero downtime deployments.
 3. Automatically replace failed pods (self-healing).
 4. Easily rollback to previous versions if needed.
 5. Declaratively manage our app state.
 
-## Deployment YAML Structure
+### Deployment YAML Structure
 
 A typical deployment YAML includes:
 
@@ -43,7 +43,7 @@ spec:
         - containerPort: 5000
 ```
 
-## Lifecycle
+### Lifecycle
 
 1. `Creation`: Kubernetes creates ReplicaSets and pods.
 2. `Monitoring`: Pods are continuously monitored and restarted if necessary.
@@ -51,7 +51,7 @@ spec:
 4. `Rollback`: Easy rollback to previous versions if something breaks.
 5. `Scaling`: Increase or decrease pod replicas based on demand.
 
-## How we used Deployments in our Project
+### How we used Deployments in our Project
 
 - Created Deployments for PostgreSQL database, backend API, and frontend UI.
 - Managed independent lifecycle and updates for each microservice.
@@ -85,27 +85,27 @@ kubectl rollout undo deployment/<deployment-name>
 ### Overview
 **A Kubernetes Service is an abstraction that defines a logical set of pods and a policy to access them. It provides a stable IP address and DNS name for pods, enabling communication between different components of your application.**
 
-## Why Use Services?
+### Why Use Services?
 1. Enable reliable network access to pods despite pod restarts or rescheduling.
 2. Expose pods inside the cluster (ClusterIP) or outside the cluster (NodePort, LoadBalancer).
 3. Load balance traffic across multiple pods.
 4. Facilitate service discovery within the cluster.
 
-## Types of Services
+### Types of Services
 
 1. `ClusterIP (default)`: Exposes the service on an internal cluster IP. Accessible only within the cluster.
 2. `NodePort`: Exposes the service on each node’s IP at a static port. Accessible outside the cluster via <NodeIP>:<NodePort>.
 3. `LoadBalancer`: Provisions an external load balancer to expose the service outside the cluster (cloud environments).
 4. `ExternalName`: Maps the service to a DNS name.
 
-## Service YAML Structure
+### Service YAML Structure
 
 A typical service YAML includes:
 - `type`: Service type (ClusterIP, NodePort, etc.).
 - `selector`: Labels to identify the pods the service routes traffic to.
 - `ports`: The ports exposed by the service and the target ports on pods.
 
-## Example snippet:
+**Example snippet:**
 
 ```yaml
 
@@ -123,7 +123,7 @@ spec:
     targetPort: 5000
 ```
 
-## How we used Services in our Project
+### How we used Services in our Project
 
 1. Created ClusterIP services for backend and PostgreSQL to enable internal communication.
 2. Created NodePort service for frontend to expose it outside the cluster on a node port.
@@ -149,7 +149,7 @@ kubectl describe svc <service-name>
 
 ## How They Work Together
 
-### 📦 PostgreSQL – DB Layer
+**📦 PostgreSQL – DB Layer**
 
 - `postgres-deployment.yaml` : Runs the official PostgreSQL image
 - Sets environment variables like: `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`
@@ -158,7 +158,7 @@ kubectl describe svc <service-name>
 - `postgres-service.yaml` : Internal ClusterIP service
 -  Used by backend to connect via postgres-service:`5432`
 
-### 🔧 Backend – API Layer
+**🔧 Backend – API Layer**
 - `backend-deployment.yaml` : Custom image (e.g., Flask/Django/Node)
 - Uses `DB_HOST=postgres-service` to connect to the DB
 - Port exposed: `5000`
@@ -167,7 +167,7 @@ kubectl describe svc <service-name>
 - `backend-service.yaml` : Exposes backend internally via ClusterIP
 - Frontend uses `http://backend-service:5000` to reach backend
 
-### 🎨 Frontend – UI Layer
+**🎨 Frontend – UI Layer**
 - `frontend-deployment.yaml` : Container for frontend (React, Vue, Angular, etc.)
 - Sets `BACKEND_URL=http://backend-service:5000`
 - Port exposed: `3000`
