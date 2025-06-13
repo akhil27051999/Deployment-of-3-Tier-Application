@@ -18,6 +18,8 @@ This project demonstrates a complete DevOps lifecycle for a simple 3-tier micros
 | **CI/CD Tools**       | GitHub Actions (CI), GitLab + ArgoCD (CD with GitOps) |
 | **Monitoring**        | Prometheus + Grafana       |
 
+---
+
 ### 📂 Directory Overview
 
 | Directory / File         | Description                                  |
@@ -29,6 +31,7 @@ This project demonstrates a complete DevOps lifecycle for a simple 3-tier micros
 | `.github/workflows/`    | GitHub Actions CI pipeline configurations        |
 | `README.md`             | Project documentation and instructions            |
 
+---
 
 ### 📁 Project Structure
 
@@ -68,6 +71,7 @@ devops-project/
 
 ```
 
+---
 ## 🧩 Project Section-wise Overview
 
 ### ✅ Section 1: Provisioning AWS EC2 Virtual Machine and SSH Access
