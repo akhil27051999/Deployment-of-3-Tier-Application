@@ -1,6 +1,6 @@
 # End-to-End DevOps Deployment for 3-Tier Application from Development to Production
 
-## Project Summary
+## 👨‍💻 Project Goal
 
 This project demonstrates a complete DevOps lifecycle for a simple 3-tier microservices application — consisting of a frontend, backend, and PostgreSQL database — deployed from development to production using modern DevOps tools and best practices.
 
@@ -68,9 +68,9 @@ devops-project/
 
 ```
 
-## Project Section-wise Overview
+## 🧱 Project Section-wise Overview
 
-### Section 1: Provisioning AWS EC2 Virtual Machine and SSH Access
+### ✅ Section 1: Provisioning AWS EC2 Virtual Machine and SSH Access
 
 - Created a Virtual Machine (VM) on AWS using the EC2 service.
 - Configured security groups to allow SSH and necessary application ports.
@@ -80,7 +80,7 @@ devops-project/
 
 ---
 
-### Section 2: Installing Docker and Containerizing the Application
+### ✅ Section 2: Installing Docker and Containerizing the Application
 
 - Installed Docker engine on the AWS EC2 VM.
 - Created Dockerfiles for each microservice: frontend, backend, and database.
@@ -90,7 +90,7 @@ devops-project/
 
 ---
 
-### Section 3: Kubernetes Setup and Deployment
+### ✅ Section 3: Kubernetes Setup and Deployment
 
 - Installed and configured Kubernetes cluster (using tools like `kubeadm`, `minikube`, or cloud-managed Kubernetes).
 - Created Kubernetes manifests including Deployments, Services, and ConfigMaps for each microservice.
@@ -100,7 +100,7 @@ devops-project/
 
 ---
 
-### Section 4: Continuous Integration (CI) with GitHub Actions
+### ✅ Section 4: Continuous Integration (CI) with GitHub Actions
 
 - Created GitHub repository to host the microservices source code.
 - Defined GitHub Actions workflows for automated build and test pipelines.
@@ -109,7 +109,7 @@ devops-project/
 
 ---
 
-### Section 5: Continuous Delivery (CD) with ArgoCD
+### ✅ Section 5: Continuous Delivery (CD) with ArgoCD
 
 - Stored Kubernetes manifests in a Github repository to act as the GitOps source.
 - Installed and configured ArgoCD to watch Github manifests and sync deployments to Kubernetes.
@@ -118,7 +118,7 @@ devops-project/
 
 ---
 
-### Section 6: Monitoring and Visualization using Prometheus and Grafana
+### ✅ Section 6: Monitoring and Visualization using Prometheus and Grafana
 
 - Deployed Prometheus to collect metrics and logs from Kubernetes pods and services.
 - Configured Prometheus exporters for application and infrastructure monitoring.
