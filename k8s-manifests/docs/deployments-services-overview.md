@@ -3,12 +3,16 @@
 ### Overview
 **A Kubernetes Deployment is a resource that manages the lifecycle of pods and replica sets for your applications. It helps you declaratively update, scale, and maintain your app with high availability.**
 
+---
+
 ### Why Use Deployments?
 1. Ensure our app runs the desired number of replicas.
 2. Enable rolling updates for zero downtime deployments.
 3. Automatically replace failed pods (self-healing).
 4. Easily rollback to previous versions if needed.
 5. Declaratively manage our app state.
+
+---
 
 ### Deployment YAML Structure
 
@@ -42,6 +46,7 @@ spec:
         ports:
         - containerPort: 5000
 ```
+---
 
 ### Lifecycle
 
@@ -50,6 +55,8 @@ spec:
 3. `Updates`: Rolling updates allow seamless version changes.
 4. `Rollback`: Easy rollback to previous versions if something breaks.
 5. `Scaling`: Increase or decrease pod replicas based on demand.
+
+---
 
 ### How we used Deployments in our Project
 
@@ -91,12 +98,16 @@ kubectl rollout undo deployment/<deployment-name>
 3. Load balance traffic across multiple pods.
 4. Facilitate service discovery within the cluster.
 
+---
+
 ### Types of Services
 
 1. `ClusterIP (default)`: Exposes the service on an internal cluster IP. Accessible only within the cluster.
 2. `NodePort`: Exposes the service on each node’s IP at a static port. Accessible outside the cluster via <NodeIP>:<NodePort>.
 3. `LoadBalancer`: Provisions an external load balancer to expose the service outside the cluster (cloud environments).
 4. `ExternalName`: Maps the service to a DNS name.
+
+---
 
 ### Service YAML Structure
 
@@ -122,6 +133,8 @@ spec:
     port: 5000
     targetPort: 5000
 ```
+
+---
 
 ### How we used Services in our Project
 
@@ -175,6 +188,7 @@ kubectl describe svc <service-name>
 - `frontend-service.yaml` : NodePort service
 - Makes UI accessible from outside the cluster : Port `80` → container port `3000`
 
+---
 
 ## Expected Output
 ![Screenshot 2025-05-25 003103](https://github.com/user-attachments/assets/c1740ffc-5b95-4b6a-9a70-f5f05c85646d)
