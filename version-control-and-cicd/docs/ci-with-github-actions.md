@@ -21,14 +21,14 @@
 ### 🔐 Docker Hub Secrets
 Before running this pipeline, store your Docker credentials in the GitHub repository secrets:
 
-**Secret Name	Description**
+- **Secret Name	Description**
 1. `DOCKER_USERNAME`	Our Docker Hub username (e.g., akhilthyadi)
 2. `DOCKER_PASSWORD`	Docker Hub password or access token
 
-**we can add these in GitHub by going to:**
+- **we can add these in GitHub by going to:**
 `Repository Settings → Secrets → Actions → New repository secret`
 
-**Successful Build**
+- **Successful Build**
 
 Once the pipeline is triggered, it builds and pushes the images. You’ll see logs like:
 
