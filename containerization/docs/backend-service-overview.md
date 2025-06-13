@@ -2,7 +2,7 @@
 
 **This document provides a step-by-step guide for understanding the backend microservice and containerizing it using Docker.**
 
-## 📁 Directory Structure
+### 📁 Directory Structure
 
 **The `backend/` directory contains the following files:**
 
