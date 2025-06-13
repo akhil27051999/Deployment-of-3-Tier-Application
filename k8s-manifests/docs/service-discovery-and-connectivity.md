@@ -32,7 +32,7 @@ We deployed all three components inside a Kubernetes cluster using Deployments a
 ```bash
 postgres-service.default.svc.cluster.local
 ```
----
+
 ## 🔬 How We Verified Connectivity
 
 ### ✅ From Frontend to Backend
