@@ -144,7 +144,7 @@ spec:
 2. Created NodePort service for frontend to expose it outside the cluster on a node port.
 3. Allowed frontend to communicate with backend and backend to communicate with the database via service DNS names.
 
-## Troubleshooting Connectivity
+## 🧰 Troubleshooting Connectivity
 
 **1. To check service details and assigned IPs/ports.**
 ```bash
