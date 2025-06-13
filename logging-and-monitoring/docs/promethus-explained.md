@@ -51,7 +51,7 @@ This means: discover all Kubernetes nodes, and scrape their Node Exporter metric
 ![Screenshot 2025-05-23 233339](https://github.com/user-attachments/assets/efc99b91-3182-4059-be6a-7fd313e0d9bb)
 
 
-### Summary
+## Summary
 
 **1. What Prometheus scrapes:**	Metrics exposed on /metrics endpoints (not logs)
 
