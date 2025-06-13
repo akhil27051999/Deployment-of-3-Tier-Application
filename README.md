@@ -6,6 +6,7 @@ This project demonstrates a complete DevOps lifecycle for a simple 3-tier micros
 
 ![image](https://github.com/user-attachments/assets/2187559e-298e-43d2-9ea9-ee6234de2a40)
 
+---
 
 ### 🛠️ DevOps Tools Stack
 
@@ -71,7 +72,6 @@ devops-project/
 
 ```
 
----
 ## 🧩 Project Section-wise Overview
 
 ### ✅ Section 1: Provisioning AWS EC2 Virtual Machine and SSH Access
