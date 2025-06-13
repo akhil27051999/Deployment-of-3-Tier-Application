@@ -57,6 +57,8 @@ chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
 kind version
 ```
+---
+
 ### Creating a Cluster with Kind
 
 ```bash
