@@ -160,7 +160,6 @@ kubectl describe svc <service-name>
 
 **4. Debug DNS issues using tools like nslookup or dig inside pods.**
 
----
 
 ## How They Work Together
 
@@ -190,7 +189,6 @@ kubectl describe svc <service-name>
 - `frontend-service.yaml` : NodePort service
 - Makes UI accessible from outside the cluster : Port `80` → container port `3000`
 
----
 
 ## Expected Output
 ![Screenshot 2025-05-25 003103](https://github.com/user-attachments/assets/c1740ffc-5b95-4b6a-9a70-f5f05c85646d)
