@@ -2,8 +2,6 @@
 
 **This section explains how the 3-tier application (frontend, backend, database) is deployed and managed using Argo CD**.
 
----
-
 ### Repo Structure
 
 - `k8s-manifests/apps/frontend` - Kubernetes manifests for Frontend (deployment + service)
