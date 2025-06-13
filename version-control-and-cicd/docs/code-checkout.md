@@ -56,13 +56,13 @@ This will create a folder named `Deployment-of-3-Tier-Application` in our curren
 
 **✅ Step 4: Check the project structure**
 
-Navigate into the cloned directory:
+**1. Navigate into the cloned directory:**
 
 ```bash
 cd Deployment-of-3-Tier-Application
 ```
 
-List files and folders:
+**2. List files and folders:**
 
 ```bash
 ls -l
